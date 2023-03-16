@@ -1,0 +1,42 @@
+
+<app-nav></app-nav>
+
+<section class="home-section">
+
+                                        <app-navbar></app-navbar>
+
+<div class="home-content">
+ 
+                                        <app-rubrique></app-rubrique>
+
+<div class="sales-boxes"> 
+<div class="recent-sales box"> 
+
+                                        <app-listuser></app-listuser>
+
+<div class="button">
+<a href="#">See All</a>
+</div>
+</div>
+<div class="top-sales box">
+
+                                        <app-gestionuser></app-gestionuser>
+      
+    </div>
+  </div>       
+</div>
+</section>
+
+<script>
+   let sidebar = document.querySelector(".sidebar");
+let sidebarBtn = document.querySelector(".sidebarBtn");
+sidebarBtn.onclick = function() {
+  sidebar.classList.toggle("active");
+  if(sidebar.classList.contains("active")){
+  sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+}else
+  sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+}
+</script>
+
+
