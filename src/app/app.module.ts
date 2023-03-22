@@ -83,6 +83,37 @@ import { UserinterfaceComponent } from './composants/views/user/userinterface/us
 import { HttpClientModule } from '@angular/common/http';
 import { AccueilpointageComponent } from './composants/views/pointages/accueilpointage/accueilpointage.component';
 import { LoginInterceptorProvider } from './composants/authentification/login/login.interceptor';
+import { EwaatiComponent } from './composants/views/user/ewaati/ewaati/ewaati.component';
+import { AjoututilisateurComponent } from './composants/views/utilisateur/ajoututilisateur/ajoututilisateur.component';
+import { AffichutilisateurComponent } from './composants/views/utilisateur/affichutilisateur/affichutilisateur.component';
+import { SupputilisateurComponent } from './composants/views/utilisateur/supputilisateur/supputilisateur.component';
+import { ListutilisateurComponent } from './composants/views/utilisateur/listutilisateur/listutilisateur.component';
+import { PaysComponent } from './composants/views/localite/loctype/pays/pays.component';
+import { VilleComponent } from './composants/views/localite/loctype/ville/ville.component';
+import { QuartierComponent } from './composants/views/localite/loctype/quartier/quartier.component';
+import { CommuneComponent } from './composants/views/localite/loctype/commune/commune.component';
+import { RegionComponent } from './composants/views/localite/loctype/region/region.component';
+import { GestionutilisateurComponent } from './composants/views/utilisateur/gestionutilisateur/gestionutilisateur.component';
+import { AlerteComponent } from './composants/authentification/alerte/alerte.component';
+import { AccueilabsenceComponent } from './composants/views/absence/accueilabsence/accueilabsence.component';
+import { AccueilcongeComponent } from './composants/views/conge/accueilconge/accueilconge.component';
+import { AccueildispositifComponent } from './composants/views/dispositif/accueildispositif/accueildispositif.component';
+import { AccueilemployeComponent } from './composants/views/employe/accueilemploye/accueilemploye.component';
+import { AccueilmissionComponent } from './composants/views/mutation/accueilmission/accueilmission.component';
+import { AccueilmutationComponent } from './composants/views/mutation/accueilmutation/accueilmutation.component';
+import { AccueilretardComponent } from './composants/views/retard/accueilretard/accueilretard.component';
+import { AccueilserviceComponent } from './composants/views/service/accueilservice/accueilservice.component';
+import { AccueilsiteComponent } from './composants/views/sites/accueilsite/accueilsite.component';
+import { AccueiluserComponent } from './composants/views/user/accueiluser/accueiluser.component';
+import { AccueilutilisateurComponent } from './composants/views/utilisateur/accueilutilisateur/accueilutilisateur.component';
+import { AccueillocaliteComponent } from './composants/views/localite/accueillocalite/accueillocalite.component';
+import { GestionComponent } from './composants/views/gestion/gestion.component';
+import { AccueillogsComponent } from './composants/views/logs/accueillogs/accueillogs.component';
+import { AjoutlogsComponent } from './composants/views/logs/ajoutlogs/ajoutlogs.component';
+import { ListlogsComponent } from './composants/views/logs/listlogs/listlogs.component';
+import { IconrechutilisateurComponent } from './composants/views/utilisateur/iconrechutilisateur/iconrechutilisateur.component';
+import { ListutilComponent } from './composants/views/utilisateur/listutil/listutil.component';
+
 
 
 
@@ -142,7 +173,7 @@ import { LoginInterceptorProvider } from './composants/authentification/login/lo
     AjoutsuperadminComponent,
     ListsuperadminComponent,
     AffichsuperadminComponent,
-    
+
     AjoutewaatiComponent,
     AffichewaatiComponent,
     ListeewaatiComponent,
@@ -167,7 +198,38 @@ import { LoginInterceptorProvider } from './composants/authentification/login/lo
     GestionuserComponent,
     AffichuserComponent,
     UserinterfaceComponent,
-    AccueilpointageComponent
+    AccueilpointageComponent,
+    EwaatiComponent,
+    AjoututilisateurComponent,
+    AffichutilisateurComponent,
+    SupputilisateurComponent,
+    ListutilisateurComponent,
+    PaysComponent,
+    VilleComponent,
+    QuartierComponent,
+    CommuneComponent,
+    RegionComponent,
+    GestionutilisateurComponent,
+    AlerteComponent,
+    AccueilabsenceComponent,
+    AccueilcongeComponent,
+    AccueildispositifComponent,
+    AccueilemployeComponent,
+    AccueilmissionComponent,
+    AccueilmutationComponent,
+    AccueilretardComponent,
+    AccueilserviceComponent,
+    AccueilsiteComponent,
+    AccueiluserComponent,
+    AccueilutilisateurComponent,
+    AccueillocaliteComponent,
+    GestionComponent,
+    AccueillogsComponent,
+    AjoutlogsComponent,
+    ListlogsComponent,
+    IconrechutilisateurComponent,
+    ListutilComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -175,11 +237,13 @@ import { LoginInterceptorProvider } from './composants/authentification/login/lo
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-   
-  
+
+
 
   ],
-  providers: [LoginInterceptorProvider],
+  providers: [LoginInterceptorProvider
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

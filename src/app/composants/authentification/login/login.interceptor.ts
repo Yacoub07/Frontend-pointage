@@ -1,21 +1,40 @@
+import { AutService } from '../aut.service';
 import { Injectable } from '@angular/core';
 import {
   HttpRequest,
   HttpHandler,
   HttpEvent,
   HttpInterceptor,
-  HTTP_INTERCEPTORS
+  HTTP_INTERCEPTORS,
+  HttpErrorResponse
 } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { catchError, Observable, throwError } from 'rxjs';
 
 @Injectable()
 export class LoginInterceptor implements HttpInterceptor {
 
-  constructor() {}
+  constructor(private autService:AutService) {}
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-    console.log(request)
-    return next.handle(request);
+    const accessToken = JSON.stringify('Bearer '+localStorage.getItem('token'));
+
+    if (accessToken) {
+      // If we have a token, we set it to the header
+      request = request.clone({
+         setHeaders: {Authorization: `${accessToken}`}
+      });
+   }
+   return next.handle(request).pipe(
+  	catchError((err) => {
+   	 if (err instanceof HttpErrorResponse) {
+       	 if (err.status === 401) {
+
+     	}
+ 	 }
+  	return throwError(err.error);
+	})
+
+   )
   }
 }
 

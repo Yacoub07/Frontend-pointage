@@ -1,0 +1,194 @@
+
+
+
+
+
+<app-nav></app-nav>
+
+<section class="home-section">
+  <nav>
+    <div class="sidebar-button">
+      <i class='bx bx-menu sidebarBtn'><a href="gestpointa"><img src="../../../assets/icon/employe.png" alt=""></a></i>
+      <span class="dashboard">Utilisateur</span>
+    </div>
+    <div class="search-box">
+      <input type="text" placeholder="Recherche...">
+      <i class='bx bx-search' ><img src="../../../assets/icon/rechercher.png" alt=""></i>
+    </div>
+    <div class="profile-details">
+      <!--<img src="images/profile.jpg" alt="">-->
+      <span class="admin_name">Yacouba DIABATE</span>
+      <i class='bx bx-chevron-down' ><img src="../../../assets/icon/utilisateur.png" alt=""></i>
+    </div>
+  </nav>
+
+<div class="home-content">
+    <div class="overview-boxes">
+      <div class="box">
+        <div class="right-side">
+          <div class="box-topic">Pointages</div>
+          <div class="number">707</div>
+          <div class="indicator">
+            <i class='bx bx-up-arrow-alt'></i>
+            <span class="text">Total pointage</span>
+          </div>
+        </div>
+        <i class='bx bx-cart-alt cart'><a href="gestpointa"><img src="../../../assets/icon/pointages.png" alt=""></a></i>
+      </div>
+      <div class="box">
+        <div class="right-side">
+          <div class="box-topic">Employe</div>
+          <div class="number">476</div>
+          <div class="indicator">
+            <i class='bx bx-up-arrow-alt'></i>
+            <span class="text">Total employé</span>
+          </div>
+        </div>
+        <i class='bx bxs-cart-add cart two' ><a href=""><img src="../../../assets/icon/employe.png" alt=""></a></i>
+      </div>
+      <div class="box">
+        <div class="right-side">
+          <div class="box-topic">Sites</div>
+          <div class="number">14</div>
+          <div class="indicator">
+            <i class='bx bx-up-arrow-alt'></i>
+            <span class="text">Total sites</span>
+          </div>
+        </div>
+        <i class='bx bx-cart cart three'><a href=""><img src="../../../assets/icon/sites.png" alt=""></a></i>
+      </div>
+      <div class="box">
+        <div class="right-side">
+          <div class="box-topic">Services</div>
+          <div class="number">5</div>
+          <div class="indicator">
+            <i class='bx bx-down-arrow-alt down'></i>
+            <span class="text">Total services</span>
+          </div>
+        </div>
+        <i class='bx bxs-cart-download cart four' ><a href=""><img src="../../../assets/icon/service.png" alt=""></a></i>
+      </div>
+    </div>
+    <div class="sales-boxes">
+        <div class="recent-sales box">
+          <div class="title">Ajoute Utilisateur</div>
+          <div class="sales-details">
+
+
+
+<!--Formulaire-->
+
+<table class="table">
+  <thead>
+    <tr>
+
+      <th scope="col">Nom</th>
+      <th scope="col">Prenom</th>
+      <th scope="col">Matricule</th>
+      <th scope="col">Contact</th>
+      <th scope="col">Rôle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+  </tbody>
+</table>
+
+
+          </div>
+          <div class="button">
+            <a href="listutilisateur" >Recherche</a>
+          </div>
+        </div>
+        <div class="top-sales box">
+          <div class="title">Gestion Utilisateur</div>
+          <ul class="top-sales-details">
+            <li>
+            <a href="ajoututilisateur">
+              <!--<img src="images/sunglasses.jpg" alt="">-->
+              <span class="product">Ajout Utilisateur</span>
+            </a>
+            <span class="price"><img src="../../../assets/icon/ajoute.png" alt=""></span>
+          </li>
+          <li>
+            <a href="modifempl">
+               <!--<img src="images/jeans.jpg" alt="">-->
+              <span class="product">Modifier les données d'un employé</span>
+            </a>
+            <span class="price"><img src="../../../assets/icon/modifier.png" alt=""></span>
+          </li>
+          <li>
+            <a href="#">
+             <!-- <img src="images/nike.jpg" alt="">-->
+              <span class="product">Supprimer un employé</span>
+            </a>
+            <span class="price"><img src="../../../assets/icon/supprimer.png" alt=""></span>
+          </li>
+          <li>
+            <a href="#">
+              <!--<img src="images/scarves.jpg" alt="">-->
+              <span class="product">Gestion de droit</span>
+            </a>
+            <span class="price"><img src="../../../assets/icon/autorisation.png" alt=""></span>
+          </li>
+          <li>
+            <a href="#">
+              <!--<img src="images/bag.jpg" alt="">-->
+              <span class="product">Imprimer la liste des pointages</span>
+            </a>
+            <span class="price"><img src="../../../assets/icon/imprimante.png" alt=""></span>
+
+          </ul>
+        </div>
+      </div>
+
+  </div>
+</section>
+
+<script>
+ let sidebar = document.querySelector(".sidebar");
+let sidebarBtn = document.querySelector(".sidebarBtn");
+sidebarBtn.onclick = function() {
+sidebar.classList.toggle("active");
+if(sidebar.classList.contains("active")){
+sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+}else
+sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+}
+</script>
+

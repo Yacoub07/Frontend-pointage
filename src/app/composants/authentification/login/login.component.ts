@@ -6,6 +6,8 @@ import { AutService } from '../aut.service';
 import { Router, Route } from '@angular/router';
 import { User } from './user';
 import { DashboardComponent } from '../../views/accueil/dashboard/dashboard.component';
+import { NgModel } from '@angular/forms';
+
 
 
 
@@ -20,18 +22,20 @@ export class LoginComponent implements OnInit {
   public LoginForm!: FormGroup;
   isSubmitted  =  false;
 
+
+
 constructor(private autService: AutService,
-            private router: Router, 
+            private router: Router,
             private formBuilder: FormBuilder)
 {}
 
   ngOnInit(): void {
     this.LoginForm=this.formBuilder.group({
-      username: ['',[Validators.required,Validators.minLength(4)]],
-      password: ['',[Validators.required,Validators.minLength(4)]],
+      matricule: ['',[Validators.required,Validators.minLength(4)]],
+      mdp: ['',[Validators.required,Validators.minLength(4)]],
     })
 
-    
+
   }
 
   get formControls() { return this.LoginForm.controls; }
@@ -43,16 +47,16 @@ constructor(private autService: AutService,
       next:(result: string | null)=>{
         if(result!=null){
           localStorage.setItem('token', result)
-          localStorage.getItem('token')
-          this.router.navigateByUrl('Dashboard')
+
+          this.router.navigateByUrl('dashboard')
         }
         console.log(result);
-  
+
       },error:(err: any)=>{
         console.log(err);
-  
+
       }
     })
-  
+
     }
   }

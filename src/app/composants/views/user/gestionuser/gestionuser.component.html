@@ -1,45 +1,42 @@
-<div class="title">Gestion Utilisateurs</div>
-      <ul class="top-sales-details">
-        <li>
-        <a href="listempl">
-          <!--<img src="images/sunglasses.jpg" alt="">-->
-          <span class="product">Ajouter un utilisateur</span>
-        </a>
-        <span class="price"><img src="../../../assets/icon/employe.png" alt=""></span>
-      </li>
-      <li>
-        <a href="#">
-           <!--<img src="images/jeans.jpg" alt="">-->
-          <span class="product">Pointages par Site</span>
-        </a>
-        <span class="price"><img src="../../../assets/icon/sites.png" alt=""></span>
-      </li>
-      <li>
-        <a href="#">
-         <!-- <img src="images/nike.jpg" alt="">-->
-          <span class="product">Pointage par Service</span>
-        </a>
-        <span class="price"><img src="../../../assets/icon/service.png" alt=""></span>
-      </li>
-      <li>
-        <a href="#">
-          <!--<img src="images/scarves.jpg" alt="">-->
-          <span class="product">Pointage par Localité</span>
-        </a>
-        <span class="price"><img src="../../../assets/icon/localite.png" alt=""></span>
-      </li>
-      <li>
-        <a href="#">
-          <!--<img src="images/blueBag.jpg" alt="">-->
-          <span class="product">Pointage par Dispositif</span>
-        </a>
-        <span class="price"><img src="../../../assets/icon/Dispositif.png" alt=""></span>
-      </li>
-      <li>
-        <a href="#">
-          <!--<img src="images/bag.jpg" alt="">-->
-          <span class="product">Imprimer la liste des pointages</span>
-        </a>
-        <span class="price"><img src="../../../assets/icon/imprimante.png" alt=""></span>
+
+<app-nav></app-nav>
+
+<section class="home-section">
+
+                                        <app-navbar></app-navbar>
+
+<div class="home-content">
+ 
+                                        <app-rubrique></app-rubrique>
+
+<div class="sales-boxes"> 
+<div class="recent-sales box"> 
+
+                                        <app-listpointages></app-listpointages>
+
+<div class="button">
+<a href="#">See All</a>
+</div>
+</div>
+<div class="top-sales box">
+
+                                        <app-gestuser></app-gestuser>
       
-      </ul>
+    </div>
+  </div>       
+</div>
+</section>
+
+<script>
+   let sidebar = document.querySelector(".sidebar");
+let sidebarBtn = document.querySelector(".sidebarBtn");
+sidebarBtn.onclick = function() {
+  sidebar.classList.toggle("active");
+  if(sidebar.classList.contains("active")){
+  sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+}else
+  sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+}
+</script>
+
+

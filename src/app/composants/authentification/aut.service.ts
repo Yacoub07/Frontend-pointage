@@ -7,7 +7,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AutService {
 
-  url = ""
+
+
+
+  url = "http://localhost:8080/api/authenticate"
   constructor(
     private httpcl :HttpClient
   ) { }

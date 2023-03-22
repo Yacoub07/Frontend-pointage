@@ -33,6 +33,29 @@ import { GestlocalitComponent } from './composants/views/localite/gestlocalit/ge
 import { ListlocalitComponent } from './composants/views/localite/listlocalit/listlocalit.component';
 import { SupplocalitComponent } from './composants/views/localite/supplocalit/supplocalit.component';
 import { AccueilpointageComponent } from './composants/views/pointages/accueilpointage/accueilpointage.component';
+import { AffichuserComponent } from './composants/views/user/affichuser/affichuser.component';
+import { GestionuserComponent } from './composants/views/user/gestionuser/gestionuser.component';
+import { AjoututilisateurComponent } from './composants/views/utilisateur/ajoututilisateur/ajoututilisateur.component';
+import { GestionutilisateurComponent } from './composants/views/utilisateur/gestionutilisateur/gestionutilisateur.component';
+import { AccueilabsenceComponent } from './composants/views/absence/accueilabsence/accueilabsence.component';
+import { AccueilcongeComponent } from './composants/views/conge/accueilconge/accueilconge.component';
+import { AccueildispositifComponent } from './composants/views/dispositif/accueildispositif/accueildispositif.component';
+import { AccueilemployeComponent } from './composants/views/employe/accueilemploye/accueilemploye.component';
+import { AccueillocaliteComponent } from './composants/views/localite/accueillocalite/accueillocalite.component';
+import { AccueilmissionComponent } from './composants/views/mutation/accueilmission/accueilmission.component';
+import { AccueilmutationComponent } from './composants/views/mutation/accueilmutation/accueilmutation.component';
+import { AccueilretardComponent } from './composants/views/retard/accueilretard/accueilretard.component';
+import { AccueilserviceComponent } from './composants/views/service/accueilservice/accueilservice.component';
+import { AccueilsiteComponent } from './composants/views/sites/accueilsite/accueilsite.component';
+import { AccueiluserComponent } from './composants/views/user/accueiluser/accueiluser.component';
+import { AccueilutilisateurComponent } from './composants/views/utilisateur/accueilutilisateur/accueilutilisateur.component';
+import { GestionComponent } from './composants/views/gestion/gestion.component';
+import { AccueillogsComponent } from './composants/views/logs/accueillogs/accueillogs.component';
+import { AffichpointagesComponent } from './composants/views/pointages/affichpointages/affichpointages.component';
+import { AjoutpointagesComponent } from './composants/views/pointages/ajoutpointages/ajoutpointages.component';
+import { ListpointagesComponent } from './composants/views/pointages/listpointages/listpointages.component';
+import { ListutilisateurComponent } from './composants/views/utilisateur/listutilisateur/listutilisateur.component';
+import { AffichutilisateurComponent } from './composants/views/utilisateur/affichutilisateur/affichutilisateur.component';
 
 
 const routes: Routes = [
@@ -44,10 +67,31 @@ const routes: Routes = [
   { path: 'consigne', component: ConsignadminComponent },
 
 
-  
+
+
+  // service accueil des composants
+  {path:'accueilabsence', component:AccueilabsenceComponent},
+  {path:'accueilconge', component:AccueilcongeComponent},
+  {path:'accueildispositif', component:AccueildispositifComponent},
+  {path:'accueilemploye', component:AccueilemployeComponent},
+  {path:'accueillocalite', component:AccueillocaliteComponent},
+  {path:'accueilmission', component:AccueilmissionComponent},
+  {path:'accueilmutation', component:AccueilmutationComponent},
+  {path:'accueilpointage', component:AccueilpointageComponent},
+  {path:'accueilretard', component:AccueilretardComponent},
+  {path:'accueilservice', component:AccueilserviceComponent},
+  {path:'accueilsite', component:AccueilsiteComponent},
+  {path:'accueiluser', component:AccueiluserComponent},
+  {path:'accueilutilisateur', component: AccueilutilisateurComponent},
+  {path:'accueilgestion', component:GestionComponent},
+  {path:'accueillogs', component:AccueillogsComponent},
+
+
+
+
 
       //route absence
-      {path:'affichabsence', component:AffichabsenceComponent}, 
+      {path:'affichabsence', component:AffichabsenceComponent},
       {path:'ajoutabsence', component: AjoutabsenceComponent},
       {path:'gestabsence', component: GestabsenceComponent},
       {path:'listabsence', component: ListabsenceComponent},
@@ -60,7 +104,7 @@ const routes: Routes = [
             //sous rubrique header
             {path:'nav', component:NavComponent},
             {path:'navbar', component: NavbarComponent},
-      
+
       //route conge
       {path:'affichconge', component: AffichcongeComponent},
       {path:'ajoutconge', component: AjoutcongeComponent},
@@ -81,7 +125,7 @@ const routes: Routes = [
       {path:'ajoutempl', component: AjoutemplComponent},
       {path:'gestempl', component: GestemplComponent},
       {path:'listempl', component: ListemplComponent},
-      {path:'suppempl', component: SuppemplComponent}, 
+      {path:'suppempl', component: SuppemplComponent},
 
       //route localite
       {path:'affichlocalit', component: AffichlocalitComponent},
@@ -91,8 +135,28 @@ const routes: Routes = [
       {path:'supplocalit', component: SupplocalitComponent},
 
 
-      {path:'accueilpointage', component:AccueilpointageComponent},
- 
+      //route user
+      {path:'affichuser', component:AffichuserComponent },
+      {path:'gestionuser', component:GestionuserComponent},
+      {path:'ajoututilisateur', component: AjoututilisateurComponent},
+      {path:'gestionutilisateur', component: GestionutilisateurComponent},
+
+
+      //route utilisateur
+      {path:'listutilisateur', component:ListutilisateurComponent},
+      {path:'ajoututilisateur', component:AjoututilisateurComponent},
+      {path:'affichutilisateur', component:AffichutilisateurComponent},
+
+
+      //route pointages
+      {path:'affichepointage', component:AffichpointagesComponent},
+      {path:'ajoutpointage', component:AjoutpointagesComponent},
+      {path:'listpointage', component:ListpointagesComponent},
+
+
+
+
+
 ];
 
 @NgModule({

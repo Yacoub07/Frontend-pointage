@@ -1,39 +1,41 @@
 
-        
-    
+
+
 <div class="wrapper">
       <div class="title-text">
         <div class="title login"><a href=""><img src="../../../../assets/img/logoe.png" alt=""></a></div>
-        
+
       </div>
       <div class="form-container">
         <div class="slide-controls">
           <input type="radio" name="slide" id="login" checked>
           <input type="radio" name="slide" id="signup">
           <label for="login" class="slide login">Authentification</label>
-          
+
           <div class="slider-tab"></div>
         </div>
         <div class="form-inner">
           <form action="#" class="login" [formGroup]="LoginForm" class="login-container" (ngSubmit)="loginFonction()">
-            
+
             <pre>
             </pre>
             <div class="field">
-              <input type="text" formControlName="username" placeholder="Nom utilisateur" >
+              <input type="text" formControlName="matricule" placeholder="Nom utilisateur" ng-model="matricule" name="ngModel" >
             </div>
+            <p></p>
 
-            <div *ngIf="LoginForm.controls['username'].invalid && (LoginForm.controls['username'].dirty || LoginForm.controls['username'].touched)" class="alert alert-danger">
-              <div *ngIf="LoginForm.controls['username'].errors?.['required']">
+            <div *ngIf="LoginForm.controls['matricule'].invalid && (LoginForm.controls['matricule'].dirty || LoginForm.controls['matricule'].touched)" class="alert alert-danger">
+              <div *ngIf="LoginForm.controls['matricule'].errors?.['required']">
                 Nom utilisateur requise.
               </div></div>
 
+
             <div class="field">
-              <input type="password" formControlName="password" placeholder="Mots de passe" required>
+              <input type="password" formControlName="mdp" placeholder="Mots de passe" required ng-model="mdp" name="ngModel">
             </div>
 
-            <div *ngIf="LoginForm.controls['password'].invalid && (LoginForm.controls['password'].dirty || LoginForm.controls['password'].touched)" class="alert alert-danger">
-              <div *ngIf="LoginForm.controls['password'].errors?.['required']">
+            <div *ngIf="LoginForm.controls['mdp'].invalid && (LoginForm.controls['mdp'].dirty || LoginForm.controls['mdp'].touched)" class="alert alert-danger">
+              <div *ngIf="LoginForm.controls['mdp'].errors?.['required']">
                 Mots de passe requise.
               </div></div>
 
@@ -42,7 +44,7 @@
               <div class="btn-layer"></div>
               <input type="submit" [disabled]="LoginForm.pristine || LoginForm.invalid" value="Connextion">
             </div>
-            
+
           </form>
           <form action="#" class="signup">
             <div class="field">
@@ -52,10 +54,10 @@
               <input type="text" placeholder="Email Address" required>
             </div>
             <div class="field">
-              <input type="password" placeholder="Password" required>
+              <input type="mdp" placeholder="mdp" required>
             </div>
             <div class="field">
-              <input type="password" placeholder="Confirm password" required>
+              <input type="mdp" placeholder="Confirm mdp" required>
             </div>
             <div class="field btn">
               <div class="btn-layer"></div>
@@ -68,4 +70,4 @@
     </div>
   <script  src="./script.js"></script>
 
- 
+
