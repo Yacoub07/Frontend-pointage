@@ -124,18 +124,18 @@
 
 
           <div class="field">
-            <input type="password" formControlName="password" placeholder="password" ng-model="password" name="ngModel" >
+            <input type="mdp" formControlName="mdp" placeholder="mdp" ng-model="mdp" name="ngModel" >
           </div>
           <p></p>
-          <div *ngIf="UserForm.controls['password'].invalid && (UserForm.controls['password'].dirty || UserForm.controls['password'].touched)" class="alert alert-danger">
-            <div *ngIf="UserForm.controls['password'].errors?.['required']">
+          <div *ngIf="UserForm.controls['mdp'].invalid && (UserForm.controls['mdp'].dirty || UserForm.controls['mdp'].touched)" class="alert alert-danger">
+            <div *ngIf="UserForm.controls['mdp'].errors?.['required']">
               Nom utilisateur requise.
             </div></div>
 
 
     <div class="field btn">
       <div class="btn-layer"></div>
-      <input type="submit" value="Connextion">
+      <input type="submit" value="Connexion">
     </div>
 
   </form>

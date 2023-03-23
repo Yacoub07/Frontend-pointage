@@ -16,7 +16,9 @@ export class LoginInterceptor implements HttpInterceptor {
   constructor(private autService:AutService) {}
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-    const accessToken = JSON.stringify('Bearer '+localStorage.getItem('token'));
+    const auth_token = localStorage.getItem('token');
+
+    const accessToken = `Bearer ${auth_token?.substring(10, auth_token.length-2)}`
 
     if (accessToken) {
       // If we have a token, we set it to the header

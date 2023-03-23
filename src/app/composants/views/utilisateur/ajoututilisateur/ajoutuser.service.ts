@@ -7,23 +7,29 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class AjoutuserService {
   [x: string]: any;
 
-  urlEmploye = "http://localhost:8080/employe"
+  urlEmploye = "http://localhost:8080/employe/ajout"
   urlAdminEwaati = "http://localhost:8080/ewaati"
   constructor(
     private httpcl :HttpClient
-  ) { }
-   token = JSON.stringify(localStorage.getItem('token'));
-   headers = new HttpHeaders({
-    'Content-Type': 'application/json',
-    'Authorization': 'Bearer'+this.token
-  });
-   requestOptions = { headers: this.headers };
+  ) {
+
+
+   }
+
+  //  auth_token = localStorage.getItem('token');
+  //   headers = new HttpHeaders({
+  //      'Content-Type': 'application/json',
+  //      'responseType':'json',
+  //      'Authorization': `Bearer ${this.auth_token?.substring(10, this.auth_token.length-2)}`
+  //    });
+
+  //   requestOptions = { headers: this.headers };
+
   AjoutEmploye(userInfo:any){
 
-    console.log(this.token);
 
 
-   return  this.httpcl.post(this.urlEmploye+"/ajout", userInfo, this.requestOptions);
+   return  this.httpcl.post(this.urlEmploye, userInfo );
 
   }
 

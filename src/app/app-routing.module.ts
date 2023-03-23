@@ -56,6 +56,10 @@ import { AjoutpointagesComponent } from './composants/views/pointages/ajoutpoint
 import { ListpointagesComponent } from './composants/views/pointages/listpointages/listpointages.component';
 import { ListutilisateurComponent } from './composants/views/utilisateur/listutilisateur/listutilisateur.component';
 import { AffichutilisateurComponent } from './composants/views/utilisateur/affichutilisateur/affichutilisateur.component';
+import { AjoutserviceComponent } from './composants/views/service/ajoutservice/ajoutservice.component';
+import { AffichserviceComponent } from './composants/views/service/affichservice/affichservice.component';
+import { GestserviceComponent } from './composants/views/service/gestservice/gestservice.component';
+import { ListserviceComponent } from './composants/views/service/listservice/listservice.component';
 
 
 const routes: Routes = [
@@ -152,6 +156,13 @@ const routes: Routes = [
       {path:'affichepointage', component:AffichpointagesComponent},
       {path:'ajoutpointage', component:AjoutpointagesComponent},
       {path:'listpointage', component:ListpointagesComponent},
+
+
+      //route services
+      {path:'ajoutservice', component:AjoutserviceComponent},
+      {path:'affichservice', component:AffichserviceComponent},
+      {path:'gestservice', component:GestserviceComponent},
+      {path:'listservice', component:ListserviceComponent},
 
 
 

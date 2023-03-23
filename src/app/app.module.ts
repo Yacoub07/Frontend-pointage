@@ -113,6 +113,13 @@ import { AjoutlogsComponent } from './composants/views/logs/ajoutlogs/ajoutlogs.
 import { ListlogsComponent } from './composants/views/logs/listlogs/listlogs.component';
 import { IconrechutilisateurComponent } from './composants/views/utilisateur/iconrechutilisateur/iconrechutilisateur.component';
 import { ListutilComponent } from './composants/views/utilisateur/listutil/listutil.component';
+import { FormserviceComponent } from './composants/views/service/formservice/formservice.component';
+import { ListpointComponent } from './composants/views/pointages/listpoint/listpoint.component';
+import { PointaemplComponent } from './composants/views/employe/pointaempl/pointaempl.component';
+import { PointalocalitComponent } from './composants/views/localite/pointalocalit/pointalocalit.component';
+import { PointaserviceComponent } from './composants/views/service/pointaservice/pointaservice.component';
+import { PointasiteComponent } from './composants/views/sites/pointasite/pointasite.component';
+import { PointadispositifComponent } from './composants/views/dispositif/pointadispositif/pointadispositif.component';
 
 
 
@@ -229,6 +236,13 @@ import { ListutilComponent } from './composants/views/utilisateur/listutil/listu
     ListlogsComponent,
     IconrechutilisateurComponent,
     ListutilComponent,
+    FormserviceComponent,
+    ListpointComponent,
+    PointaemplComponent,
+    PointalocalitComponent,
+    PointaserviceComponent,
+    PointasiteComponent,
+    PointadispositifComponent,
 
   ],
   imports: [

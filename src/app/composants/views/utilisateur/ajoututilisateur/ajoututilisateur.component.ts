@@ -30,7 +30,7 @@ export class AjoututilisateurComponent implements OnInit {
       prenom: ['',[Validators.required,Validators.minLength(4)]],
       matricule: ['',[Validators.required,Validators.minLength(4)]],
       telephone: ['',[Validators.required,Validators.minLength(8)]],
-      password: ['',[Validators.required,Validators.minLength(8)]],
+      mdp: ['',[Validators.required,Validators.minLength(8)]],
     })
   }
 
