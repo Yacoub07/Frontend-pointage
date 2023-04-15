@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ConsignadminComponent } from './composants/authentification/consignadmin/consignadmin.component';
 import { LoginComponent } from './composants/authentification/login/login.component';
@@ -60,6 +60,48 @@ import { AjoutserviceComponent } from './composants/views/service/ajoutservice/a
 import { AffichserviceComponent } from './composants/views/service/affichservice/affichservice.component';
 import { GestserviceComponent } from './composants/views/service/gestservice/gestservice.component';
 import { ListserviceComponent } from './composants/views/service/listservice/listservice.component';
+import { AjoutsiteComponent } from './composants/views/sites/ajoutsite/ajoutsite.component';
+import { ListsiteComponent } from './composants/views/sites/listsite/listsite.component';
+import { PointasiteComponent } from './composants/views/sites/pointasite/pointasite.component';
+import { AjoutlogsComponent } from './composants/views/logs/ajoutlogs/ajoutlogs.component';
+import { GestlogsComponent } from './composants/views/logs/gestlogs/gestlogs.component';
+import { ListlogsComponent } from './composants/views/logs/listlogs/listlogs.component';
+import { AjoutmissionComponent } from './composants/views/mission/ajoutmission/ajoutmission.component';
+import { AffichmissionComponent } from './composants/views/mission/affichmission/affichmission.component';
+import { GestmissionComponent } from './composants/views/mission/gestmission/gestmission.component';
+import { ListmissionComponent } from './composants/views/mission/listmission/listmission.component';
+import { AffichmutationComponent } from './composants/views/mutation/affichmutation/affichmutation.component';
+import { AjoutmutationComponent } from './composants/views/mutation/ajoutmutation/ajoutmutation.component';
+import { GestmutationComponent } from './composants/views/mutation/gestmutation/gestmutation.component';
+import { ListmutationComponent } from './composants/views/mutation/listmutation/listmutation.component';
+import { AffichretardComponent } from './composants/views/retard/affichretard/affichretard.component';
+import { AjoutretardComponent } from './composants/views/retard/ajoutretard/ajoutretard.component';
+import { GestretardComponent } from './composants/views/retard/gestretard/gestretard.component';
+import { ListretardComponent } from './composants/views/retard/listretard/listretard.component';
+import { PointalocalitComponent } from './composants/views/localite/pointalocalit/pointalocalit.component';
+import { CommuneComponent } from './composants/views/localite/loctype/commune/commune.component';
+import { PaysComponent } from './composants/views/localite/loctype/pays/pays.component';
+import { QuartierComponent } from './composants/views/localite/loctype/quartier/quartier.component';
+import { PointagesService } from './composants/views/pointages/pointages.service';
+import { PointadispositifComponent } from './composants/views/dispositif/pointadispositif/pointadispositif.component';
+import { AccueilcommuneComponent } from './composants/views/localite/loctype/commune/accueilcommune/accueilcommune.component';
+import { AjoutcommuneComponent } from './composants/views/localite/loctype/commune/ajoutcommune/ajoutcommune.component';
+import { AccueilpaysComponent } from './composants/views/localite/loctype/pays/accueilpays/accueilpays.component';
+import { AjoutpaysComponent } from './composants/views/localite/loctype/pays/ajoutpays/ajoutpays.component';
+import { AccueilquartierComponent } from './composants/views/localite/loctype/quartier/accueilquartier/accueilquartier.component';
+import { AjoutquartierComponent } from './composants/views/localite/loctype/quartier/ajoutquartier/ajoutquartier.component';
+import { AccueilregionComponent } from './composants/views/localite/loctype/region/accueilregion/accueilregion.component';
+import { AjoutregionComponent } from './composants/views/localite/loctype/region/ajoutregion/ajoutregion.component';
+import { AccueilvilleComponent } from './composants/views/localite/loctype/ville/accueilville/accueilville.component';
+import { AjoutvilleComponent } from './composants/views/localite/loctype/ville/ajoutville/ajoutville.component';
+import { VilleComponent } from './composants/views/localite/loctype/ville/ville.component';
+import { RegionComponent } from './composants/views/localite/loctype/region/region.component';
+import { PointacommuneComponent } from './composants/views/localite/loctype/commune/pointacommune/pointacommune.component';
+import { PointapaysComponent } from './composants/views/localite/loctype/pays/pointapays/pointapays.component';
+import { PointaquartierComponent } from './composants/views/localite/loctype/quartier/pointaquartier/pointaquartier.component';
+import { PointaregionComponent } from './composants/views/localite/loctype/region/pointaregion/pointaregion.component';
+import { PointavilleComponent } from './composants/views/localite/loctype/ville/pointaville/pointaville.component';
+import { ModiemplComponent } from './composants/views/employe/modiempl/modiempl.component';
 
 
 const routes: Routes = [
@@ -67,7 +109,7 @@ const routes: Routes = [
   //authentification route
 
   {path: '', pathMatch: 'full', redirectTo: 'Login'},
-  { path: 'Login', component: LoginComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'consigne', component: ConsignadminComponent },
 
 
@@ -90,11 +132,14 @@ const routes: Routes = [
   {path:'accueilgestion', component:GestionComponent},
   {path:'accueillogs', component:AccueillogsComponent},
 
+  {path:'deconnexion', component:LoginComponent},
+
 
 
 
 
       //route absence
+      {path:'accueilabsence', component:AccueilabsenceComponent},
       {path:'affichabsence', component:AffichabsenceComponent},
       {path:'ajoutabsence', component: AjoutabsenceComponent},
       {path:'gestabsence', component: GestabsenceComponent},
@@ -130,6 +175,7 @@ const routes: Routes = [
       {path:'gestempl', component: GestemplComponent},
       {path:'listempl', component: ListemplComponent},
       {path:'suppempl', component: SuppemplComponent},
+      {path:'modifempl', component: ModiemplComponent},
 
       //route localite
       {path:'affichlocalit', component: AffichlocalitComponent},
@@ -156,6 +202,23 @@ const routes: Routes = [
       {path:'affichepointage', component:AffichpointagesComponent},
       {path:'ajoutpointage', component:AjoutpointagesComponent},
       {path:'listpointage', component:ListpointagesComponent},
+      //pointages par rubrique
+      {path:'pointalocalit', component:PointalocalitComponent}, //localite
+      {path:'pointagesite', component:PointasiteComponent}, //site
+      {path:'pointageservice', component:PointagesService}, //service
+      {path:'pointadispositif', component:PointadispositifComponent}, //dispositif
+
+            //route pointage localite
+            {path:'pointacommune', component:PointacommuneComponent}, //commune
+            {path:'pointapays', component:PointapaysComponent}, //pays
+            {path:'pointaquartier', component:PointaquartierComponent}, //quartier
+            {path:'pointaregion', component:PointaregionComponent}, //region
+            {path:'pointaville', component:PointavilleComponent}, //ville
+
+
+
+
+
 
 
       //route services
@@ -163,6 +226,72 @@ const routes: Routes = [
       {path:'affichservice', component:AffichserviceComponent},
       {path:'gestservice', component:GestserviceComponent},
       {path:'listservice', component:ListserviceComponent},
+
+      //route site
+      {path:'ajoutsite', component:AjoutsiteComponent},
+      {path:'listesite', component:ListsiteComponent},
+      {path:'pointasite', component:PointasiteComponent},
+
+      //route logs
+      {path:'ajoutlogs', component:AjoutlogsComponent},
+      {path:'gestlogs', component:GestlogsComponent},
+      {path:'listlogs', component:ListlogsComponent},
+
+      //route mission
+      {path:'accueilmission', component: AccueilmissionComponent},
+      {path:'ajoutmission', component:AjoutmissionComponent},
+      {path:'affichmission', component:AffichmissionComponent},
+      {path:'gestmission', component:GestmissionComponent},
+      {path:'listmission', component:ListmissionComponent},
+
+      //route mutation
+      {path:'accueilmutation', component:AccueilmutationComponent},
+      {path:'affichmutation', component:AffichmutationComponent},
+      {path:'ajoutmutation', component:AjoutmutationComponent},
+      {path:'gestmutation', component:GestmutationComponent},
+      {path:'listmutation', component:ListmutationComponent},
+
+      //route retard
+      {path:'accueilretard', component:AccueilretardComponent},
+      {path:'affichretard', component:AffichretardComponent},
+      {path:'ajoutretard', component:AjoutretardComponent},
+      {path:'gestretard', component:GestretardComponent},
+      {path:'listretard', component:ListretardComponent},
+
+      //route localite
+      {path:'ajoutlocalite', component:AjoutlocalitComponent},
+      {path:'gestlocalolit', component:GestlocalitComponent},
+      {path:'listlocalt', component:ListlocalitComponent},
+
+      //sous rubrique localite
+      {path:'commune', component:CommuneComponent},
+      {path:'pays', component: PaysComponent},
+      {path:'quartier', component: QuartierComponent},
+      {path:'ville', component: VilleComponent},
+      {path:'region', component: RegionComponent},
+
+      //route commune
+      {path:'accueilcommune', component:AccueilcommuneComponent},
+      {path:'ajoutcommune', component:AjoutcommuneComponent},
+
+
+      //route pays
+      {path:'accueilpays', component:AccueilpaysComponent},
+      {path:'ajoutpays', component:AjoutpaysComponent},
+
+      //route quartier
+      {path:'accueilquartier', component:AccueilquartierComponent},
+      {path:'ajoutquartier', component:AjoutquartierComponent},
+
+
+      //route region
+      {path:'accueilregion', component:AccueilregionComponent},
+      {path:'ajoutregion', component:AjoutregionComponent},
+
+
+      //route ville
+      {path:'accueilville', component:AccueilvilleComponent},
+      {path:'ajoutville', component:AjoutvilleComponent},
 
 
 

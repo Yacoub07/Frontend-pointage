@@ -17,183 +17,50 @@
     </div>
     <div class="profile-details">
       <!--<img src="images/profile.jpg" alt="">-->
-      <span class="admin_name">Yacouba DIABATE</span>
-      <i class='bx bx-chevron-down' ><img src="../../../assets/icon/utilisateur.png" alt=""></i>
+      <app-entete></app-entete>
     </div>
   </nav>
 
 <div class="home-content">
-    <div class="overview-boxes">
-      <div class="box">
-        <div class="right-side">
-          <div class="box-topic">Pointages</div>
-          <div class="number">707</div>
-          <div class="indicator">
-            <i class='bx bx-up-arrow-alt'></i>
-            <span class="text">Total pointage</span>
-          </div>
-        </div>
-        <i class='bx bx-cart-alt cart'><a href="gestpointa"><img src="../../../assets/icon/pointages.png" alt=""></a></i>
-      </div>
-      <div class="box">
-        <div class="right-side">
-          <div class="box-topic">Employe</div>
-          <div class="number">476</div>
-          <div class="indicator">
-            <i class='bx bx-up-arrow-alt'></i>
-            <span class="text">Total employé</span>
-          </div>
-        </div>
-        <i class='bx bxs-cart-add cart two' ><a href=""><img src="../../../assets/icon/employe.png" alt=""></a></i>
-      </div>
-      <div class="box">
-        <div class="right-side">
-          <div class="box-topic">Sites</div>
-          <div class="number">14</div>
-          <div class="indicator">
-            <i class='bx bx-up-arrow-alt'></i>
-            <span class="text">Total sites</span>
-          </div>
-        </div>
-        <i class='bx bx-cart cart three'><a href=""><img src="../../../assets/icon/sites.png" alt=""></a></i>
-      </div>
-      <div class="box">
-        <div class="right-side">
-          <div class="box-topic">Services</div>
-          <div class="number">5</div>
-          <div class="indicator">
-            <i class='bx bx-down-arrow-alt down'></i>
-            <span class="text">Total services</span>
-          </div>
-        </div>
-        <i class='bx bxs-cart-download cart four' ><a href=""><img src="../../../assets/icon/service.png" alt=""></a></i>
-      </div>
-    </div>
+  <app-rubrique></app-rubrique>
     <div class="sales-boxes">
         <div class="recent-sales box">
-          <div class="title">Ajoute employé</div>
+          <div class="title">Ajoute Site</div>
           <div class="sales-details">
 
 
 
 <!--Formulaire-->
 
-            <form class="row g-3 needs-validation" novalidate>
-                <div class="col-md-4 position-relative">
-                  <label for="validationTooltip01" class="form-label">Prenom</label>
-                  <input type="text" class="form-control" id="validationTooltip01" value="" required>
-                  <div class="valid-tooltip">
+<form class="row g-3 needs-validation" novalidate [formGroup]="siteForm" (ngSubmit)="SiteFonction()" >
+  <div class="col-md-4 position-relative">
+    <label for="validationTooltip01" class="form-label">Nom site</label>
+    <input type="nomsite" formControlName="nomsite" class="form-control" id="nomsite" value="nomsite" required>
+    <div class="valid-tooltip">
 
-                  </div>
-                </div>
+    </div>
+  </div>
 
-                <div class="col-md-4 position-relative">
-                  <label for="validationTooltip02" class="form-label">Nom</label>
-                  <input type="text" class="form-control" id="validationTooltip02" value="" required>
-                  <div class="valid-tooltip">
-                  </div>
-                </div>
+  <div class="col-md-4 position-relative">
+    <label for="validationTooltip02" class="form-label">Code site</label>
+    <input type="Codesite" formControlName="Codesite" class="form-control" id="Codesite" value="Codesite" required>
+    <div class="valid-tooltip">
+    </div>
+  </div>
 
-                <div class="col-md-4 position-relative">
-                    <label for="validationTooltip02" class="form-label">Poste</label>
-                    <input type="text" class="form-control" id="validationTooltip02" value="" required>
-                    <div class="valid-tooltip">
-                    </div>
-                  </div>
-
-                <div class="col-md-4 position-relative">
-                    <label for="validationTooltip02" class="form-label">Matricule</label>
-                    <input type="number" class="form-control" id="validationTooltip02" value="" required>
-                    <div class="valid-tooltip">
-                    </div>
-                  </div>
-
-                  <div class="col-md-4 position-relative">
-                    <label for="validationTooltip02" class="form-label">Service</label>
-                    <input type="text" class="form-control" id="validationTooltip02" value="" required>
-                    <div class="valid-tooltip">
-                    </div>
-                  </div>
-
-                  <div class="col-md-4 position-relative">
-                    <label for="validationTooltip02" class="form-label">Site</label>
-                    <input type="text" class="form-control" id="validationTooltip02" value="" required>
-                    <div class="valid-tooltip">
-                    </div>
-                  </div>
-
-                  <div class="col-md-4 position-relative">
-                    <label for="validationTooltip02" class="form-label">Contact</label>
-                    <input type="number" class="form-control" id="validationTooltip02" value="" required>
-                    <div class="valid-tooltip">
-                    </div>
-                  </div>
-
-                  <div class="col-md-4 position-relative">
-                    <label for="validationTooltip02" class="form-label">Absence</label>
-                    <input type="text" class="form-control" id="validationTooltip02" value="" required>
-                    <div class="valid-tooltip">
-                    </div>
-                  </div>
-
-                  <div class="col-md-4 position-relative">
-                    <label for="validationTooltip02" class="form-label">Logs</label>
-                    <input type="text" class="form-control" id="validationTooltip02" value="" required>
-                    <div class="valid-tooltip">
-                    </div>
-                  </div>
-
-
-                <div class="col-12">
-                  <button class="btn btn-primary" type="submit">Sauvegarder</button>
-                </div>
-              </form>
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Sauvegarder</button>
+  </div>
+</form>
 
 
           </div>
           <div class="button">
-            <a href="#" >See All</a>
+
           </div>
         </div>
         <div class="top-sales box">
-          <div class="title">Gestion employé</div>
-          <ul class="top-sales-details">
-            <li>
-            <a href="ajoutempl">
-              <!--<img src="images/sunglasses.jpg" alt="">-->
-              <span class="product">Ajouter un employé</span>
-            </a>
-            <span class="price"><img src="../../../assets/icon/ajoute.png" alt=""></span>
-          </li>
-          <li>
-            <a href="modifempl">
-               <!--<img src="images/jeans.jpg" alt="">-->
-              <span class="product">Modifier les données d'un employé</span>
-            </a>
-            <span class="price"><img src="../../../assets/icon/modifier.png" alt=""></span>
-          </li>
-          <li>
-            <a href="#">
-             <!-- <img src="images/nike.jpg" alt="">-->
-              <span class="product">Supprimer un employé</span>
-            </a>
-            <span class="price"><img src="../../../assets/icon/supprimer.png" alt=""></span>
-          </li>
-          <li>
-            <a href="#">
-              <!--<img src="images/scarves.jpg" alt="">-->
-              <span class="product">Gestion de droit</span>
-            </a>
-            <span class="price"><img src="../../../assets/icon/autorisation.png" alt=""></span>
-          </li>
-          <li>
-            <a href="#">
-              <!--<img src="images/bag.jpg" alt="">-->
-              <span class="product">Imprimer la liste des pointages</span>
-            </a>
-            <span class="price"><img src="../../../assets/icon/imprimante.png" alt=""></span>
-
-          </ul>
+         <app-gestsite></app-gestsite>
         </div>
       </div>
 

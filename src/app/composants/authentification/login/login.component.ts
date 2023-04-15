@@ -7,6 +7,7 @@ import { Router, Route } from '@angular/router';
 import { User } from './user';
 import { DashboardComponent } from '../../views/accueil/dashboard/dashboard.component';
 import { NgModel } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 
 
@@ -32,7 +33,7 @@ constructor(private autService: AutService,
   ngOnInit(): void {
     this.LoginForm=this.formBuilder.group({
       matricule: ['',[Validators.required,Validators.minLength(4)]],
-      mdp: ['',[Validators.required,Validators.minLength(4)]],
+      password: ['',[Validators.required,Validators.minLength(4)]],
     })
 
 

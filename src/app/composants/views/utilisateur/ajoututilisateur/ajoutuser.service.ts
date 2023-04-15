@@ -7,35 +7,35 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class AjoutuserService {
   [x: string]: any;
 
-  urlEmploye = "http://localhost:8080/employe/ajout"
+  urlEmploye = "http://localhost:8080/employe"
   urlAdminEwaati = "http://localhost:8080/ewaati"
   constructor(
     private httpcl :HttpClient
   ) {
 
-
    }
 
-  //  auth_token = localStorage.getItem('token');
-  //   headers = new HttpHeaders({
-  //      'Content-Type': 'application/json',
-  //      'responseType':'json',
-  //      'Authorization': `Bearer ${this.auth_token?.substring(10, this.auth_token.length-2)}`
-  //    });
 
-  //   requestOptions = { headers: this.headers };
 
   AjoutEmploye(userInfo:any){
 
 
 
-   return  this.httpcl.post(this.urlEmploye, userInfo );
+   return  this.httpcl.post(this.urlEmploye+"/ajout", userInfo );
 
   }
 
-  AjoutAdminEwaati(userInfo:any){
+  Affichutilisateur()
+  {
+    return this.httpcl.get(this.urlEmploye+"/liste");
+  }
 
-    return  this.httpcl.post(this.urlAdminEwaati+"/ajout", userInfo, {responseType:"text"});
+  AjoutAdminEwaati(userInfo:any, photo:File){
+    let data = new FormData();
+    data.append('file',photo)
+    data.append('ewaati',JSON.stringify(userInfo))
+
+    return  this.httpcl.post(this.urlAdminEwaati+"/ajout", data, {responseType:"json"});
 
    }
 

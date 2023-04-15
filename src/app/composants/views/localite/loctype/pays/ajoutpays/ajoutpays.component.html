@@ -1,0 +1,84 @@
+
+
+
+
+
+<app-nav></app-nav>
+
+<section class="home-section">
+  <nav>
+    <div class="sidebar-button">
+      <i class='bx bx-menu sidebarBtn'><a href="gestpointa"><img src="../../../assets/icon/employe.png" alt=""></a></i>
+      <span class="dashboard">Pays</span>
+    </div>
+    <div class="search-box">
+      <input type="text" placeholder="Recherche...">
+      <i class='bx bx-search' ><img src="../../../assets/icon/rechercher.png" alt=""></i>
+    </div>
+    <div class="profile-details">
+      <!--<img src="images/profile.jpg" alt="">-->
+      <app-entete></app-entete>
+    </div>
+  </nav>
+
+<div class="home-content">
+    <app-rubrique></app-rubrique>
+    <div class="sales-boxes">
+        <div class="recent-sales box">
+          <div class="title">Ajout Pays</div>
+          <div class="sales-details">
+
+
+
+<!--Formulaire-->
+
+<form class="row g-3 needs-validation" novalidate [formGroup]="paysForm" (ngSubmit)="paysFonction()">
+  <div class="col-md-4 position-relative">
+    <label for="validationTooltip01" class="form-label">Nom pays</label>
+    <input type="nom" formControlName="nom" class="form-control" id="nom" value="" required>
+    <div class="valid-tooltip">
+
+    </div>
+  </div>
+
+  <div class="col-md-4 position-relative">
+    <label for="validationTooltip02" class="form-label">Indicatif</label>
+    <input type="indicatif" formControlName="indicatif"  class="form-control" id="indicatif" value="" required>
+    <div class="valid-tooltip">
+    </div>
+  </div>
+
+
+
+
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Sauvegarder</button>
+  </div>
+</form>
+
+
+          </div>
+          <div class="button">
+            <app-iconpays></app-iconpays>
+          </div>
+        </div>
+        <div class="top-sales box">
+          <app-gestpays></app-gestpays>
+        </div>
+      </div>
+
+  </div>
+</section>
+
+<script>
+ let sidebar = document.querySelector(".sidebar");
+let sidebarBtn = document.querySelector(".sidebarBtn");
+sidebarBtn.onclick = function() {
+sidebar.classList.toggle("active");
+if(sidebar.classList.contains("active")){
+sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+}else
+sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+}
+</script>
+

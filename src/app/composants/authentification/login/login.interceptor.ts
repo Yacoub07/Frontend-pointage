@@ -20,6 +20,7 @@ export class LoginInterceptor implements HttpInterceptor {
 
     const accessToken = `Bearer ${auth_token?.substring(10, auth_token.length-2)}`
 
+
     if (accessToken) {
       // If we have a token, we set it to the header
       request = request.clone({
@@ -38,6 +39,10 @@ export class LoginInterceptor implements HttpInterceptor {
 
    )
   }
+
+
+
+
 }
 
 export const LoginInterceptorProvider=

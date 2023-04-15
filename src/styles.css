@@ -1,7 +1,9 @@
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape){}
+
 /* You can add global styles to this file, and also import other style files */
 body{
     background-image: url("../../../app/adminapp/src/assets/img/Auth.jpg");
-    background-color : RGBa(255, 255, 0, 0.2);
+    /*background-color : RGBa(255, 255, 0, 0.2); */
   }
 
 
@@ -11,13 +13,13 @@ body{
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
   }
-  
+
   .sidebar-button
   {
     color: #ffffff;
   }
-  
-  
+
+
   .sidebar{
     position: fixed;
     height: 100%;
@@ -33,7 +35,7 @@ body{
     height: 80px;
     display: flex;
     align-items: center;
-    
+
   }
   .sidebar .logo-details i{
     font-size: 28px;
@@ -49,7 +51,7 @@ body{
   }
   .sidebar .nav-links{
     margin-top: 10px;
-    
+
   }
   .sidebar .nav-links li{
     position: relative;
@@ -83,11 +85,11 @@ body{
     white-space: nowrap;
     text-shadow :rgba(5, 5, 5, 5)
 
-    webkit-transform scale(1);
+  webkit-transform scale(1);
 	  transform: scale(1);
 	  -webkit-transition: .3s ease-in-out;
 	  transition: .3s ease-in-out;
-    
+
   }
   .sidebar .nav-links .log_out{
     position: absolute;
@@ -96,7 +98,7 @@ body{
   }
   .home-section{
     position: relative;
-    
+
     min-height: 100vh;
     width: calc(100% - 240px);
     left: 240px;
@@ -105,7 +107,7 @@ body{
   .sidebar.active ~ .home-section{
     width: calc(100% - 60px);
     left: 60px;
-    
+
   }
   .home-section nav{
     display: flex;
@@ -119,7 +121,7 @@ body{
     width: calc(100% - 240px);
     left: 240px;
     z-index: 100;
-    padding: 0 20px;
+    padding: 0 10px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
     transition: all 0.5s ease;
   }
@@ -153,6 +155,7 @@ body{
     border-radius: 6px;
     font-size: 18px;
     padding: 0 15px;
+
   }
   nav .search-box .bx-search{
     position: absolute;
@@ -222,16 +225,23 @@ body{
     font-size: 20px;
     font-weight: 500;
   }
-  .home-content .box .number{
+
+
+  .home-content .box .number
+  {
     display: inline-block;
     font-size: 35px;
     margin-top: -6px;
     font-weight: 500;
   }
+
+
   .home-content .box .indicator{
     display: flex;
     align-items: center;
   }
+
+
   .home-content .box .indicator i{
     height: 20px;
     width: 20px;
@@ -282,7 +292,7 @@ body{
     justify-content: space-between;
     /* padding: 0 20px; */
   }
-  
+
   /* left box */
   .home-content .sales-boxes .recent-sales{
     width: 65%;
@@ -334,7 +344,7 @@ body{
   .sales-boxes .box .button a:hover{
     background:  #0d3173f5;
   }
-  
+
   /* Right box */
   .home-content .sales-boxes .top-sales{
     width: 35%;
@@ -459,7 +469,7 @@ body{
     .sidebar.active ~ .home-section nav{
       left: 60px;
       width: calc(100% - 60px);
+
     }
   }
 
-  

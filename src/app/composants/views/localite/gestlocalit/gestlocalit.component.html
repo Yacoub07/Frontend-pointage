@@ -1,45 +1,50 @@
 <div class="title">Gestion Localites</div>
       <ul class="top-sales-details">
         <li>
-        <a href="listempl">
-          <!--<img src="images/sunglasses.jpg" alt="">-->
-          <span class="product">Ajouter un utilisateur</span>
-        </a>
-        <span class="price"><img src="../../../assets/icon/employe.png" alt=""></span>
-      </li>
+          <a [routerLink]="['/accueillocalite']">
+            <!--<img src="images/sunglasses.jpg" alt="">-->
+            <span class="product">Liste</span>
+          </a>
+          <span class="price"><img src="../../../assets/icon/employe.png" alt=""></span>
+        </li>
+
+        <li>
+          <a [routerLink]="['/accueilpays']">
+            <!--<img src="images/blueBag.jpg" alt="">-->
+            <span class="product">Pays</span>
+          </a>
+          <span class="price"><img src="../../../assets/icon/Dispositif.png" alt=""></span>
+        </li>
+
+        <li>
+          <a [routerLink]="['/accueilregion']">
+           <!-- <img src="images/nike.jpg" alt="">-->
+            <span class="product">Région</span>
+          </a>
+          <span class="price"><img src="../../../assets/icon/service.png" alt=""></span>
+        </li>
+
+        <li>
+          <a [routerLink]="['/accueilville']">
+            <!--<img src="images/scarves.jpg" alt="">-->
+            <span class="product">Ville</span>
+          </a>
+          <span class="price"><img src="../../../assets/icon/localite.png" alt=""></span>
+        </li>
+
       <li>
-        <a href="#">
+        <a [routerLink]="['/accueilquartier']">
            <!--<img src="images/jeans.jpg" alt="">-->
-          <span class="product">Pointages par Site</span>
+          <span class="product">Quartier</span>
         </a>
         <span class="price"><img src="../../../assets/icon/sites.png" alt=""></span>
       </li>
+
       <li>
-        <a href="#">
-         <!-- <img src="images/nike.jpg" alt="">-->
-          <span class="product">Pointage par Service</span>
-        </a>
-        <span class="price"><img src="../../../assets/icon/service.png" alt=""></span>
-      </li>
-      <li>
-        <a href="#">
-          <!--<img src="images/scarves.jpg" alt="">-->
-          <span class="product">Pointage par Localité</span>
-        </a>
-        <span class="price"><img src="../../../assets/icon/localite.png" alt=""></span>
-      </li>
-      <li>
-        <a href="#">
-          <!--<img src="images/blueBag.jpg" alt="">-->
-          <span class="product">Pointage par Dispositif</span>
-        </a>
-        <span class="price"><img src="../../../assets/icon/Dispositif.png" alt=""></span>
-      </li>
-      <li>
-        <a href="#">
+        <a [routerLink]="">
           <!--<img src="images/bag.jpg" alt="">-->
           <span class="product">Imprimer la liste des pointages</span>
         </a>
         <span class="price"><img src="../../../assets/icon/imprimante.png" alt=""></span>
-      
+
       </ul>

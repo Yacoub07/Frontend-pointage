@@ -120,6 +120,44 @@ import { PointalocalitComponent } from './composants/views/localite/pointalocali
 import { PointaserviceComponent } from './composants/views/service/pointaservice/pointaservice.component';
 import { PointasiteComponent } from './composants/views/sites/pointasite/pointasite.component';
 import { PointadispositifComponent } from './composants/views/dispositif/pointadispositif/pointadispositif.component';
+import { IconsiteComponent } from './composants/views/sites/iconsite/iconsite.component';
+import { IconeComponent } from './composants/views/dispositif/icone/icone.component';
+import { GestlogsComponent } from './composants/views/logs/gestlogs/gestlogs.component';
+import { IconlogsComponent } from './composants/views/logs/iconlogs/iconlogs.component';
+import { AccueilcommuneComponent } from './composants/views/localite/loctype/commune/accueilcommune/accueilcommune.component';
+import { AccueilpaysComponent } from './composants/views/localite/loctype/pays/accueilpays/accueilpays.component';
+import { AccueilquartierComponent } from './composants/views/localite/loctype/quartier/accueilquartier/accueilquartier.component';
+import { AccueilregionComponent } from './composants/views/localite/loctype/region/accueilregion/accueilregion.component';
+import { AccueilvilleComponent } from './composants/views/localite/loctype/ville/accueilville/accueilville.component';
+import { AjoutcommuneComponent } from './composants/views/localite/loctype/commune/ajoutcommune/ajoutcommune.component';
+import { AjoutpaysComponent } from './composants/views/localite/loctype/pays/ajoutpays/ajoutpays.component';
+import { AjoutquartierComponent } from './composants/views/localite/loctype/quartier/ajoutquartier/ajoutquartier.component';
+import { AjoutregionComponent } from './composants/views/localite/loctype/region/ajoutregion/ajoutregion.component';
+import { AjoutvilleComponent } from './composants/views/localite/loctype/ville/ajoutville/ajoutville.component';
+import { GestcommuneComponent } from './composants/views/localite/loctype/commune/gestcommune/gestcommune.component';
+import { GestpaysComponent } from './composants/views/localite/loctype/pays/gestpays/gestpays.component';
+import { GestquartierComponent } from './composants/views/localite/loctype/quartier/gestquartier/gestquartier.component';
+import { GestregionComponent } from './composants/views/localite/loctype/region/gestregion/gestregion.component';
+import { GestvilleComponent } from './composants/views/localite/loctype/ville/gestville/gestville.component';
+import { IconcommuneComponent } from './composants/views/localite/loctype/commune/iconcommune/iconcommune.component';
+import { IconpaysComponent } from './composants/views/localite/loctype/pays/iconpays/iconpays.component';
+import { IconquartierComponent } from './composants/views/localite/loctype/quartier/iconquartier/iconquartier.component';
+import { IconregionComponent } from './composants/views/localite/loctype/region/iconregion/iconregion.component';
+import { IconvilleComponent } from './composants/views/localite/loctype/ville/iconville/iconville.component';
+import { PointacommuneComponent } from './composants/views/localite/loctype/commune/pointacommune/pointacommune.component';
+import { PointapaysComponent } from './composants/views/localite/loctype/pays/pointapays/pointapays.component';
+import { PointaquartierComponent } from './composants/views/localite/loctype/quartier/pointaquartier/pointaquartier.component';
+import { PointaregionComponent } from './composants/views/localite/loctype/region/pointaregion/pointaregion.component';
+import { PointavilleComponent } from './composants/views/localite/loctype/ville/pointaville/pointaville.component';
+import { EnteteComponent } from './composants/views/accueil/entete/entete.component';
+import { IconemplComponent } from './composants/views/employe/iconempl/iconempl.component';
+import { ServicemplComponent } from './composants/views/employe/servicempl/servicempl.component';
+import { HttpClient } from '@angular/common/http';
+import { ROUTES, RouterModule } from '@angular/router';
+import { IconserviceComponent } from './composants/views/service/iconservice/iconservice.component';
+import { IconlocaliteComponent } from './composants/views/localite/iconlocalite/iconlocalite.component';
+import { ModiemplComponent } from './composants/views/employe/modiempl/modiempl.component';
+
 
 
 
@@ -243,6 +281,41 @@ import { PointadispositifComponent } from './composants/views/dispositif/pointad
     PointaserviceComponent,
     PointasiteComponent,
     PointadispositifComponent,
+    IconsiteComponent,
+    IconeComponent,
+    GestlogsComponent,
+    IconlogsComponent,
+    AccueilcommuneComponent,
+    AccueilpaysComponent,
+    AccueilquartierComponent,
+    AccueilregionComponent,
+    AccueilvilleComponent,
+    AjoutcommuneComponent,
+    AjoutpaysComponent,
+    AjoutquartierComponent,
+    AjoutregionComponent,
+    AjoutvilleComponent,
+    GestcommuneComponent,
+    GestpaysComponent,
+    GestquartierComponent,
+    GestregionComponent,
+    GestvilleComponent,
+    IconcommuneComponent,
+    IconpaysComponent,
+    IconquartierComponent,
+    IconregionComponent,
+    IconvilleComponent,
+    PointacommuneComponent,
+    PointapaysComponent,
+    PointaquartierComponent,
+    PointaregionComponent,
+    PointavilleComponent,
+    EnteteComponent,
+    IconemplComponent,
+    ServicemplComponent,
+    IconserviceComponent,
+    IconlocaliteComponent,
+    ModiemplComponent,
 
   ],
   imports: [
@@ -251,6 +324,7 @@ import { PointadispositifComponent } from './composants/views/dispositif/pointad
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
+
 
 
 

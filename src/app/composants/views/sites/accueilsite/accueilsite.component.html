@@ -1,1 +1,74 @@
-<p>accueilsite works!</p>
+
+
+
+
+
+<app-nav></app-nav>
+
+<section class="home-section">
+  <nav>
+    <div class="sidebar-button">
+      <i class='bx bx-menu sidebarBtn'><a href="gestpointa"><img src="../../../assets/icon/employe.png" alt=""></a></i>
+      <span class="dashboard">Site</span>
+    </div>
+    <div class="search-box">
+      <input type="text" placeholder="Recherche...">
+      <i class='bx bx-search' ><img src="../../../assets/icon/rechercher.png" alt=""></i>
+    </div>
+    <div class="profile-details">
+      <!--<img src="images/profile.jpg" alt="">-->
+      <app-entete></app-entete>
+    </div>
+  </nav>
+
+<div class="home-content">
+  <app-rubrique></app-rubrique>
+    <div class="sales-boxes">
+        <div class="recent-sales box">
+          <div class="title">Liste Site</div>
+          <div class="sales-details">
+
+
+
+<!--Formulaire-->
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Nom du Site</th>
+      <th scope="col">Code Site</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let sites of listsites">
+      <td><img src="../../../../../assets/icon/sites.png" alt="">&nbsp;&nbsp;{{sites.nomsite}}</td>
+      <td>{{sites.Codesite}}</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+          </div>
+
+        </div>
+        <div class="top-sales box">
+          <app-gestsite></app-gestsite>
+        </div>
+      </div>
+
+  </div>
+</section>
+
+<script>
+ let sidebar = document.querySelector(".sidebar");
+let sidebarBtn = document.querySelector(".sidebarBtn");
+sidebarBtn.onclick = function() {
+sidebar.classList.toggle("active");
+if(sidebar.classList.contains("active")){
+sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+}else
+sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+}
+</script>
+

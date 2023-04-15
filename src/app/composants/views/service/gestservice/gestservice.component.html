@@ -1,29 +1,29 @@
 <div class="title">Gestion service</div>
           <ul class="top-sales-details">
             <li>
-            <a href="ajoutservice">
+            <a [routerLink]="['/accueilservice']">
               <!--<img src="images/sunglasses.jpg" alt="">-->
-              <span class="product">Ajout Service</span>
+              <span class="product">Afficher la liste</span>
             </a>
             <span class="price"><img src="../../../assets/icon/ajoute.png" alt=""></span>
           </li>
           <li>
-            <a href="affichservice">
+            <a [routerLink]="['/affichservice']">
                <!--<img src="images/jeans.jpg" alt="">-->
-              <span class="product">Liste Service</span>
+              <span class="product">Employé par site Service</span>
             </a>
             <span class="price"><img src="../../../assets/icon/modifier.png" alt=""></span>
           </li>
           <li>
-            <a href="#">
+            <a [routerLink]="['/pointageservice']">
              <!-- <img src="images/nike.jpg" alt="">-->
-              <span class="product">Supprimer un service</span>
+              <span class="product">Pointage par Service</span>
             </a>
             <span class="price"><img src="../../../assets/icon/supprimer.png" alt=""></span>
           </li>
 
           <li>
-            <a href="#">
+            <a [routerLink]="">
               <!--<img src="images/bag.jpg" alt="">-->
               <span class="product">Imprimer la liste des pointages</span>
             </a>

@@ -1,20 +1,20 @@
 <div class="sidebar">
-    <div class="logo-details">
+    <div class="logo-details" >
       <i class='bx bxl-c-plus-plus'></i>
-      <span class="logo_name"><a href="dashboard"><img src="../../../assets/img/ewaati.png" alt=""></a></span>
+      <span class="logo_name" ><a [routerLink]="['/dashboard']"><img src="../../../assets/img/ewaati.png" alt=""></a></span>
     </div>
       <ul class="nav-links">
         <li>
-          <a href="accueilpointage" class="">
+          <a [routerLink]="['/accueilpointage']"routerLinkActive="active" >
             <i class='bx bx-grid-alt' ><img src="../../../assets/icon/pointages.png" alt=""></i>
-            <span class="links_name" >
+            <span class="links_name">
                 Pointages
             </span>
           </a>
         </li>
 
         <li>
-          <a href="accueilemploye" class="">
+          <a [routerLink]="['/accueilemploye']" routerLinkActive="active">
             <i class='bx bx-grid-alt' ><img src="../../../assets/icon/employe.png" alt=""> </i>
             <span class="links_name" >
                 Employe
@@ -23,7 +23,7 @@
         </li>
 
         <li>
-          <a href="accueilservice" class="">
+          <a [routerLink]="['/accueilservice']" routerLinkActive="active">
             <i class='bx bx-grid-alt' ><img src="../../../assets/icon/service.png" alt=""></i>
             <span class="links_name" >
                 Services
@@ -32,17 +32,17 @@
         </li>
 
         <li>
-          <a href="accueilsite" class="">
-            <i class='bx bx-grid-alt' ><img src="../../../assets/icon/sites.png" alt=""></i>
-            <span class="links_name" >
+          <a [routerLink]="'/accueilsite'" routerLinkActive="active">
+            <i class='bx bx-grid-alt'><img src="../../../assets/icon/sites.png" alt=""></i>
+            <span class="links_name">
                 Sites
             </span>
           </a>
         </li>
 
         <li>
-          <a href="accueildispositif" class="">
-            <i class='bx bx-grid-alt' ><img src="../../../assets/icon/Dispositif.png" alt=""></i>
+          <a [routerLink]="['/accueildispositif']" routerLinkActive="active">
+            <i class='bx bx-grid-alt'><img src="../../../assets/icon/Dispositif.png" alt=""></i>
             <span class="links_name" >
                 Dispositif
             </span>
@@ -50,39 +50,39 @@
         </li>
 
         <li>
-          <a href="accueilgestion">
-            <i class='bx bx-box' > <img src="../../../assets/icon/gestion.png" alt=""></i>
+          <a [routerLink]="['/accueilgestion']" routerLinkActive="active">
+            <i class='bx bx-box'> <img src="../../../assets/icon/gestion.png" alt=""></i>
             <span class="links_name">Gestions</span>
           </a>
         </li>
         <li>
-          <a href="accueillogs">
-            <i class='bx bx-list-ul' ><img src="../../../assets/icon/journal.png" alt=""></i>
+          <a [routerLink]="['/accueillogs']" routerLinkActive="active">
+            <i class='bx bx-list-ul'><img src="../../../assets/icon/journal.png" alt=""></i>
             <span class="links_name">Logs</span>
           </a>
         </li>
         <li>
-          <a href="#">
-            <i class='bx bx-pie-chart-alt-2' ><img src="../../../assets/icon/reparation.png" alt=""></i>
+          <a [routerLink]="" routerLinkActive="active">
+            <i class='bx bx-pie-chart-alt-2'><img src="../../../assets/icon/reparation.png" alt=""></i>
             <span class="links_name">Reglages</span>
           </a>
         </li>
         <li>
-          <a href="accueillocalite">
-            <i class='bx bx-coin-stack' ><img src="../../../assets/icon/localite.png" alt=""></i>
+          <a [routerLink]="['/accueillocalite']" routerLinkActive="active">
+            <i class='bx bx-coin-stack'><img src="../../../assets/icon/localite.png" alt=""></i>
             <span class="links_name">Localite</span>
           </a>
         </li>
 
         <li>
-          <a href="accueilutilisateur">
-            <i class='bx bx-coin-stack' ><img src="../../../assets/icon/user.png" alt=""></i>
+          <a [routerLink]="['/affichutilisateur']" routerLinkActive="active">
+            <i class='bx bx-coin-stack'><img src="../../../assets/icon/user.png" alt=""></i>
             <span class="links_name">Utilisateur</span>
           </a>
         </li>
 
         <li class="log_out">
-          <a href="affichuser">
+          <a [routerLink]="['/deconnexion']">
             <i class='bx bx-log-out'><img src="../../../assets/icon/deconnexion.png" alt=""></i>
             <span class="links_name">Deconnexion</span>
           </a>

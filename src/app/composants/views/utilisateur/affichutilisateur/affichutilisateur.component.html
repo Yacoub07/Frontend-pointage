@@ -17,61 +17,15 @@
     </div>
     <div class="profile-details">
       <!--<img src="images/profile.jpg" alt="">-->
-      <span class="admin_name">Yacouba DIABATE</span>
-      <i class='bx bx-chevron-down' ><img src="../../../assets/icon/utilisateur.png" alt=""></i>
+      <app-entete></app-entete>
     </div>
   </nav>
 
 <div class="home-content">
-    <div class="overview-boxes">
-      <div class="box">
-        <div class="right-side">
-          <div class="box-topic">Pointages</div>
-          <div class="number">707</div>
-          <div class="indicator">
-            <i class='bx bx-up-arrow-alt'></i>
-            <span class="text">Total pointage</span>
-          </div>
-        </div>
-        <i class='bx bx-cart-alt cart'><a href="gestpointa"><img src="../../../assets/icon/pointages.png" alt=""></a></i>
-      </div>
-      <div class="box">
-        <div class="right-side">
-          <div class="box-topic">Employe</div>
-          <div class="number">476</div>
-          <div class="indicator">
-            <i class='bx bx-up-arrow-alt'></i>
-            <span class="text">Total employé</span>
-          </div>
-        </div>
-        <i class='bx bxs-cart-add cart two' ><a href=""><img src="../../../assets/icon/employe.png" alt=""></a></i>
-      </div>
-      <div class="box">
-        <div class="right-side">
-          <div class="box-topic">Sites</div>
-          <div class="number">14</div>
-          <div class="indicator">
-            <i class='bx bx-up-arrow-alt'></i>
-            <span class="text">Total sites</span>
-          </div>
-        </div>
-        <i class='bx bx-cart cart three'><a href=""><img src="../../../assets/icon/sites.png" alt=""></a></i>
-      </div>
-      <div class="box">
-        <div class="right-side">
-          <div class="box-topic">Services</div>
-          <div class="number">5</div>
-          <div class="indicator">
-            <i class='bx bx-down-arrow-alt down'></i>
-            <span class="text">Total services</span>
-          </div>
-        </div>
-        <i class='bx bxs-cart-download cart four' ><a href=""><img src="../../../assets/icon/service.png" alt=""></a></i>
-      </div>
-    </div>
+  <app-rubrique></app-rubrique>
     <div class="sales-boxes">
         <div class="recent-sales box">
-          <div class="title">Ajoute employé</div>
+          <div class="title">List utilisateur</div>
           <div class="sales-details">
 
 
@@ -82,48 +36,22 @@
   <thead>
     <tr>
 
-      <th scope="col">Date</th>
-      <th scope="col">Motif</th>
-      <th scope="col">Prenom</th>
       <th scope="col">Nom</th>
+      <th scope="col">Prenom</th>
       <th scope="col">Matricule</th>
+      <th scope="col">Telephone</th>
+      <th scope="col">Email</th>
+      <th scope="col">Photo</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+    <tr *ngFor="let utilisateur of listutilisateurs">
+      <td>{{utilisateur.nom}}</td>
+      <td>{{utilisateur.prenom}}</td>
+      <td>{{utilisateur.matricule}}</td>
+      <td>{{utilisateur.telephone}}</td>
+      <td>{{utilisateur.email}}</td>
+      <td>{{utilisateur.photo}}</td>
     </tr>
 
   </tbody>

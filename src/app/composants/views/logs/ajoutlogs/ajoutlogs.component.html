@@ -1,1 +1,73 @@
-<p>ajoutlogs works!</p>
+
+
+
+
+
+<app-nav></app-nav>
+
+<section class="home-section">
+  <nav>
+    <div class="sidebar-button">
+      <i class='bx bx-menu sidebarBtn'><a href="gestpointa"><img src="../../../assets/icon/employe.png" alt=""></a></i>
+      <span class="dashboard">Logs</span>
+    </div>
+    <div class="search-box">
+      <input type="text" placeholder="Recherche...">
+      <i class='bx bx-search' ><img src="../../../assets/icon/rechercher.png" alt=""></i>
+    </div>
+    <div class="profile-details">
+      <!--<img src="images/profile.jpg" alt="">-->
+      <app-entete></app-entete>
+    </div>
+  </nav>
+
+<div class="home-content">
+   <app-rubrique></app-rubrique>
+    <div class="sales-boxes">
+        <div class="recent-sales box">
+          <div class="title">Ajoute employé</div>
+          <div class="sales-details">
+
+
+
+<!--Formulaire-->
+
+            <form class="row g-3 needs-validation" novalidate>
+                <div class="col-md-4 position-relative">
+                  <label for="validationTooltip01" class="form-label">Action</label>
+                  <input type="action" class="form-control" formControlName="action" id="validationTooltip01" name="ngModel" id="action" value="" required>
+                  <div class="valid-tooltip">
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <button class="btn btn-primary" type="submit">Sauvegarder</button>
+                </div>
+              </form>
+
+
+          </div>
+          <div class="button">
+               <!--icon-->
+          </div>
+        </div>
+        <div class="top-sales box">
+          <app-gestlogs></app-gestlogs>
+        </div>
+      </div>
+
+  </div>
+</section>
+
+<script>
+ let sidebar = document.querySelector(".sidebar");
+let sidebarBtn = document.querySelector(".sidebarBtn");
+sidebarBtn.onclick = function() {
+sidebar.classList.toggle("active");
+if(sidebar.classList.contains("active")){
+sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+}else
+sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+}
+</script>
+
