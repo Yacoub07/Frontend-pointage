@@ -23,7 +23,7 @@ export class AjoutpaysComponent implements OnInit {
     {}
   ngOnInit(): void {
     this.paysForm=this.formBuilder.group({
-      nom: ['',[Validators.required,Validators.minLength(4)]],
+      nomPays: ['',[Validators.required,Validators.minLength(4)]],
       indicatif: ['',[Validators.required,Validators.minLength(4)]],
 
 

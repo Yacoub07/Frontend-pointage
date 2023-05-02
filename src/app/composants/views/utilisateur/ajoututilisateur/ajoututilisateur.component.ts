@@ -42,8 +42,7 @@ export class AjoututilisateurComponent implements OnInit {
 
 }
 
-  get formControls() { return this.UserForm.controls; }
-
+  get formControls(){ return this.UserForm.controls; }
 
 
   UserFonction(){
@@ -51,6 +50,7 @@ export class AjoututilisateurComponent implements OnInit {
     this.ajoutuserService.AjoutAdminEwaati(this.UserForm.value,this.image ).subscribe({
       next:(data)=>{
       console.log(data)
+      this.UserForm.reset()
       },error:(erreur)=>{
         console.log(erreur)
       }

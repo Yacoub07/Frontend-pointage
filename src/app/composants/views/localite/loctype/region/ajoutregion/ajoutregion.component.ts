@@ -23,7 +23,7 @@ export class AjoutregionComponent implements OnInit {
     {}
   ngOnInit(): void {
     this.regionForm=this.formBuilder.group({
-      nom: ['',[Validators.required,Validators.minLength(4)]],
+      nomRegion: ['',[Validators.required,Validators.minLength(4)]],
 
 
 

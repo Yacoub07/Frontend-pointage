@@ -38,12 +38,14 @@
 
       <th scope="col">Code</th>
       <th scope="col">Nom service</th>
+      <th scope="col">Site</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let fonction of listfocntions">
       <td> {{fonction.code}}</td>
       <td><img src="../../../../../assets/icon/service.png" alt="">&nbsp; &nbsp;{{fonction.nom_service}}</td>
+      <td> {{fonction.nomsite}}</td>
     </tr>
 
   </tbody>

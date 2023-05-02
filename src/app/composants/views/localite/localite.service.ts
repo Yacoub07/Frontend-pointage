@@ -19,11 +19,11 @@ export class LocaliteService {
    }
 
 
-   AjoutLocalite(fonctionInfo:any){
+   AjoutLocalite(serviceInfo:any){
 
 
 
-    return  this.httpcl.post(this.urlLocalite+"/ajout", fonctionInfo );
+    return  this.httpcl.post(this.urlLocalite+"/ajout", serviceInfo );
 
    }
 

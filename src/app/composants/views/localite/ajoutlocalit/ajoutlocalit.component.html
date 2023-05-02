@@ -33,37 +33,47 @@
 <!--Formulaire-->
 
             <form class="row g-3 needs-validation" [formGroup]="localiteForm" (submit)="localiteFonction">
-
-
-                <div class="col-md-4 position-relative">
-                  <label for="validationTooltip01" class="form-label">Pays</label>
-                  <input type="id" formControlName="indicatif" class="form-control" id="id" value="id" required>
-                  <div class="valid-tooltip">
-                  </div>
+              <div class="col-md-6">
+                <label for="validationServer02" class="form-label">Pays</label>
+                <select type="pays" formControlName="pays" class="form-control " name="ngModel" id="pays" value="pays" required>
+                  <option *ngFor="let pays of listepays" value="{{pays?.id}}">{{pays?.nomPays}}</option>
+                </select>
+                <div class="valid-feedback">
                 </div>
+              </div>
 
-                <div class="col-md-4">
-                  <label for="validationServer02" class="form-label">indicatif</label>
-                  <select type="select" formControlName="indicatif" class="form-control " name="ngModel" id="indicatif" value="indicatif" required>
-                    <option *ngFor="let pays of listepays" value="{{pays?.id}}">{{pays?.indicatif}}</option>
-                  </select>
-                  <div class="valid-feedback">
-                  </div>
+
+              <div class="col-md-6">
+                <label for="validationServer02" class="form-label">Region</label>
+                <select type="region" formControlName="region" class="form-control " name="ngModel" id="region" value="region" required>
+                  <option *ngFor="let region of listeregion" value="{{region?.id}}">{{region?.nomRegion}}</option>
+                </select>
+                <div class="valid-feedback">
                 </div>
+              </div>
 
-                <div class="col-md-4 position-relative">
-                    <label for="validationTooltip02" formControlName="indicatif" class="form-label">Ville</label>
-                    <input type="text" class="form-control" id="validationTooltip02" value="" required>
-                    <div class="valid-tooltip">
-                    </div>
-                  </div>
 
-                <div class="col-md-4 position-relative">
-                    <label for="validationTooltip02" formControlName="indicatif" class="form-label">Quartier</label>
-                    <input type="number" class="form-control" id="validationTooltip02" value="" required>
-                    <div class="valid-tooltip">
-                    </div>
-                  </div>
+              <div class="col-md-6">
+                <label for="validationServer02" class="form-label">Ville</label>
+                <select type="ville" formControlName="ville" class="form-control " name="ngModel" id="ville" value="ville" required>
+                  <option *ngFor="let ville of listeville" value="{{ville?.id}}">{{ville?.nomVille}}</option>
+                </select>
+                <div class="valid-feedback">
+                </div>
+              </div>
+
+
+
+              <div class="col-md-6">
+                <label for="validationServer02" class="form-label">Quartier</label>
+                <select type="quartier" formControlName="quartier" class="form-control " name="ngModel" id="quartier" value="quartier" required>
+                  <option *ngFor="let quartier of listequartier" value="{{quartier?.id}}">{{quartier?.nomQuartier}}</option>
+                </select>
+                <div class="valid-feedback">
+                </div>
+              </div>
+
+
 
 
 

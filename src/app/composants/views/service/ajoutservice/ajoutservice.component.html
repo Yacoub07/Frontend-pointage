@@ -48,6 +48,17 @@
   </div>
 
 
+  <div class="col-md-4">
+    <label for="validationServer02" class="form-label">Site</label>
+    <select type="site" formControlName="site" class="form-control " name="ngModel" id="site" value="site" required>
+      <option *ngFor="let site of listesite" value="{{site?.id}}">{{site?.nomsite}}</option>
+    </select>
+    <div class="valid-feedback">
+    </div>
+  </div>
+
+
+
 
   <div class="col-12">
     <input  class="btn btn-primary" type="submit"   value="Ajouter">

@@ -40,7 +40,7 @@
       <th scope="col">Numero Dispositif</th>
       <th scope="col">Adresse IP</th>
       <th scope="col">Port</th>
-      <th scope="col">Service</th>
+      <th scope="col">Site</th>
 
     </tr>
   </thead>
@@ -50,8 +50,8 @@
       <td>{{dispositif.identifiant}}</td>
       <td>{{dispositif.ip_dispo}}</td>
       <td>{{dispositif.port}}</td>
-      <td>{{dispositif.nom_service}}</td>
-      <td><button type="button" class="btn btn-primary">Actif</button></td>
+      <td>{{dispositif.site}}</td>
+
     </tr>
 
   </tbody>
@@ -60,7 +60,7 @@
 
           </div>
           <div class="button">
-
+            <app-icone></app-icone>
           </div>
         </div>
         <div class="top-sales box">

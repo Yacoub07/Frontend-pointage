@@ -1,5 +1,5 @@
 export interface pays {
-  nom: string;
+  nomPays: string;
   indicatif: string;
 
 

@@ -27,6 +27,8 @@
         <div class="recent-sales box">
           <div class="title">Liste employé</div>
           <div class="sales-details">
+            &emsp;
+            &emsp;
 
 
 
@@ -40,23 +42,27 @@
       <th scope="col">Prenom</th>
       <th scope="col">Matricule</th>
       <th scope="col">Contact</th>
-      <th scope="col">Email</th>
       <th scope="col">Poste</th>
-      <th scope="col">Option</th>
+      <th scope="col">Poste</th>
+
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let employe of listemployes">
-      <td><a [routerLink]="['/modifempl']"> <img src="../../../../../assets/icon/utilisateur.png" alt=""></a> {{employe.nom}}</td>
+      <td><a [routerLink]="['/modifempl']">
+
+
+      <img src="../../../../../assets/icon/utilisateur.png" alt="">
+
+
+    </a>
+      {{employe.nom}}</td>
       <td>{{employe.prenom}}</td>
       <td>{{employe.matricule}}</td>
       <td>{{employe.telephone}}</td>
       <td>{{employe.nom_service}}</td>
       <td>{{employe.poste_emp}}</td>
 
-
-
-      <td><button type="button" class="btn btn-primary">Actif</button></td>
     </tr>
   </tbody>
 </table>

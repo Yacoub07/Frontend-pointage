@@ -23,7 +23,7 @@ export class AjoutquartierComponent implements OnInit {
     {}
   ngOnInit(): void {
     this.quartierForm=this.formBuilder.group({
-      nom: ['',[Validators.required,Validators.minLength(4)]],
+      nomQuartier: ['',[Validators.required,Validators.minLength(4)]],
       longitude: ['',[Validators.required,Validators.minLength(4)]],
       latitude: ['',[Validators.required,Validators.minLength(4)]],
 

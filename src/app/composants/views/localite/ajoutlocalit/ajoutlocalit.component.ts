@@ -18,21 +18,23 @@ import { PaysComponent } from '../loctype/pays/pays.component';
 })
 export class AjoutlocalitComponent implements OnInit {
   public localiteForm!: FormGroup;
+  public pays! : any;
+  listepays: any;
+  listeregion: any;
+  listeville: any;
+  listequartier: any;
 
   isSubmitted  =  false;
-  gestpayservice: any;
-  gestregionservice: any;
-  gestvilleservice: any;
-  gestquartierservice: any;
-  listepays: any;
+
+
 
   constructor(private LocaliteService:LocaliteService,
     private router: Router,
     private formBuilder: FormBuilder,
-    private servicepaysservice:ServicepaysService,
-    private servicequartierservice:ServicequartierService,
-    private serviceregionservice:ServiceregionService,
-    private servicevilleservice:ServicevilleService)
+    private payslocal:ServicepaysService,
+    private quartierlocal:ServicequartierService,
+    private regionlocal:ServiceregionService,
+    private villelocal:ServicevilleService)
     {}
 
   ngOnInit(): void {
@@ -42,32 +44,92 @@ export class AjoutlocalitComponent implements OnInit {
     this.gestquartierservice();
 
 
+    this.localiteForm=this.formBuilder.group({
+
+
+       //pays
+       pays : ['',[Validators.required,Validators.minLength(8)]],
+
+      //region
+      region: ['',[Validators.required,Validators.minLength(4)]],
+
+
+      //Ville
+      ville: ['',[Validators.required,Validators.minLength(4)]],
+
+      //quartier
+      quartier: ['',[Validators.required,Validators.minLength(10)]],
+
+
+    })
+
     var paysid={
-      "id":this.localiteForm.value.service
+      "id":this.localiteForm.value.pays
     }
     this.localiteForm.value.pays=paysid
+    console.log(this.localiteForm.value)
+
+
+
+    var regionid={
+      "id":this.localiteForm.value.region
+    }
+    this.localiteForm.value.region=regionid
 
     console.log(this.localiteForm.value)
 
-    this.localiteForm=this.formBuilder.group({
 
-      //localite
-      id: ['',[Validators.required,Validators.minLength(4)]],
+    var villeid={
+      "id":this.localiteForm.value.ville
+    }
+    this.localiteForm.value.ville=villeid
 
-      //pays
-      indicatif: ['',[Validators.required,Validators.minLength(4)]],
+    console.log(this.localiteForm.value)
 
-      //Ville
-      NOM: ['',[Validators.required,Validators.minLength(4)]],
 
-      //Region
-      nom: ['',[Validators.required,Validators.minLength(10)]],
+    var quartierid={
+      "id":this.localiteForm.value.quartier
+    }
+    this.localiteForm.value.quartier=quartierid
 
-      //Quartier
-      Nom: ['',[Validators.required,Validators.minLength(8)]],
 
-    })
+
+
+
   }
+
+  gestpayservice() {
+    this.payslocal.Affichpays().subscribe({
+      next:(data)=>{
+        this.listepays=data
+      }})
+    }
+
+
+    gestregionservice() {
+      this.regionlocal.Affichregion().subscribe({
+        next:(data)=>{
+              this.listeregion=data
+            }})}
+
+
+    gestvilleservice() {
+      this.villelocal.Affichville().subscribe({
+        next:(data)=>{
+              this.listeville=data
+            }})
+        }
+
+
+
+    gestquartierservice() {
+      this.quartierlocal.Affichquartier().subscribe({
+            next:(data)=>{
+              this.listequartier=data
+            }})
+        }
+
+
 
   get formControls() { return this.localiteForm.controls; }
 
@@ -87,19 +149,10 @@ console.log(data)
       }
 
     })
-
-
-    this.gestpayservice()
-    {
-
-      this.servicepaysservice.Affichpays().subscribe({
-        next:(data)=>{
-          this.listepays=data
-        }})
-
-    }
 }
 }
+
+
 
 
 

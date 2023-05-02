@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { Router, Route } from '@angular/router';
 import { DispositifService } from '../dispositif.service';
 import { ServiceService } from '../../service/service.service';
+import { SiteService } from '../../sites/site.service';
 
 @Component({
   selector: 'app-ajoutdispositif',
@@ -13,7 +14,7 @@ import { ServiceService } from '../../service/service.service';
 })
 export class AjoutdispositifComponent {
   public dispositForm!: FormGroup;
-  listeservices:any;
+  listesite:any;
   alert:boolean=false
 
   isSubmitted  =  false;
@@ -23,18 +24,24 @@ export class AjoutdispositifComponent {
   constructor(private dispositifservice:DispositifService,
     private router: Router,
     private formBuilder: FormBuilder,
-    private Servicempl : ServiceService)
+    private Sitempl:SiteService)
     {}
   ngOnInit(): void {
-    this.getservice();
+    this.getsite();
     this.dispositForm=this.formBuilder.group({
       nom: ['',[Validators.required,Validators.minLength(4)]],
       identifiant: ['',[Validators.required,Validators.minLength(4)]],
       ip_dispo: ['',[Validators.required,Validators.minLength(4)]],
       port: ['',[Validators.required,Validators.minLength(4)]],
-      nom_service: ['',[Validators.required,Validators.minLength(4)]],
+      site: ['',[Validators.required,Validators.minLength(4)]],
 
     })
+  }
+  getsite() {
+    this.Sitempl.Affichsite().subscribe({
+      next:(data)=>{
+        this.listesite=data
+  }})
   }
 
 
@@ -43,14 +50,15 @@ export class AjoutdispositifComponent {
 
 
   dispositifFonction(){
-    var serviceid={
-      "id":this.dispositForm.value.service
+    var siteid={
+      "id":this.dispositForm.value.site
     }
-    this.dispositForm.value.service=serviceid
+    this.dispositForm.value.site=siteid
     console.log(this.dispositForm.value)
     this.dispositifservice.AjoutDispositif(this.dispositForm.value).subscribe({
       next:(data)=>{
 console.log(data)
+this.dispositForm.reset()
       },error:(erreur)=>{
         console.log(erreur)
       }
@@ -69,11 +77,6 @@ this.listedispositif.reset({})
 
     }
 
-    getservice()
-    {
-      this.Servicempl.Affichservice().subscribe({
-        next:(data)=>{
-          this.listeservices=data
-    }})}
+
 }
 

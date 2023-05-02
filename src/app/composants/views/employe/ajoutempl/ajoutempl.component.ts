@@ -58,6 +58,7 @@ export class AjoutemplComponent implements OnInit {
     this.employeservice.AjoutEmpl(this.emplForm.value,this.images).subscribe({
       next:(data)=>{
         console.log(data)
+        this.emplForm.reset()
         },error:(erreur)=>{
           console.log(erreur)
         }

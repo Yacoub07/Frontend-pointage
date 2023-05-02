@@ -1,4 +1,4 @@
-<div class="overview-boxes">
+<div class="overview-boxes" >
     <div class="box">
       <div class="right-side">
         <div class="box-topic">Pointages</div>
@@ -10,12 +10,12 @@
       </div>
       <i class='bx bx-cart-alt cart'><a [routerLink]="['/accueilpointage']"><img src="../../../assets/icon/pointages.png" alt=""></a></i>
     </div>
-    <div class="box">
+    <div class="box" >
       <div class="right-side">
         <div class="box-topic">Employe</div>
         <div class="number"></div>
         <div class="indicator">
-          <i class='bx bx-up-arrow-alt'></i>
+          <i class='bx bx-up-arrow-alt'>{{countempl}}</i>
           <span class="text">Total employé</span>
         </div>
       </div>
@@ -26,7 +26,7 @@
           <div class="box-topic">Services</div>
           <div class="number"></div>
           <div class="indicator">
-            <i class='bx bx-down-arrow-alt down'></i>
+            <i class='bx bx-down-arrow-alt down'>{{countservice}}</i>
             <span class="text">Total services</span>
           </div>
       </div>
@@ -37,7 +37,7 @@
         <div class="box-topic">Sites</div>
         <div class="number"></div>
         <div class="indicator">
-          <i class='bx bx-up-arrow-alt'></i>
+          <i class='bx bx-up-arrow-alt'>{{countsite}}</i>
           <span class="text">Total sites</span>
         </div>
       </div>

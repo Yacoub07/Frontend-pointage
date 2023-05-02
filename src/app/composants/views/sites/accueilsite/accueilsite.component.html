@@ -35,14 +35,16 @@
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">Nom du Site</th>
       <th scope="col">Code Site</th>
+      <th scope="col">Nom du Site</th>
+      <th scope="col">Service</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let sites of listsites">
-      <td><img src="../../../../../assets/icon/sites.png" alt="">&nbsp;&nbsp;{{sites.nomsite}}</td>
-      <td>{{sites.Codesite}}</td>
+      <td><img src="../../../../../assets/icon/sites.png" alt="">&nbsp;&nbsp;{{sites.Codesite}}</td>
+      <td>{{sites.nomsite}}</td>
+      <td>{{sites.nom_service}}</td>
     </tr>
   </tbody>
 </table>

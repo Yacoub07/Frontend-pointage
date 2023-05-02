@@ -23,7 +23,7 @@ export class AjoutvilleComponent implements OnInit {
     {}
   ngOnInit(): void {
     this.villeForm=this.formBuilder.group({
-      nom: ['',[Validators.required,Validators.minLength(4)]],
+      nomVille: ['',[Validators.required,Validators.minLength(4)]],
 
 
 

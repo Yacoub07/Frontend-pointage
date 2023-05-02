@@ -4,6 +4,8 @@ import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { Router, Route } from '@angular/router';
 import { SiteService } from '../site.service';
+import { ServiceService } from '../../service/service.service';
+
 
 @Component({
   selector: 'app-ajoutsite',
@@ -12,6 +14,7 @@ import { SiteService } from '../site.service';
 })
 export class AjoutsiteComponent implements OnInit {
   public siteForm!: FormGroup;
+  listeservices:any;
 
 
   isSubmitted  =  false;
@@ -19,15 +22,26 @@ export class AjoutsiteComponent implements OnInit {
 
   constructor(private siteservice:SiteService,
     private router: Router,
-    private formBuilder: FormBuilder)
+    private formBuilder: FormBuilder,
+    private Servicempl : ServiceService
+    )
     {}
   ngOnInit(): void {
+    this.getservice();
     this.siteForm=this.formBuilder.group({
       nomsite: ['',[Validators.required,Validators.minLength(4)]],
       Codesite: ['',[Validators.required,Validators.minLength(4)]],
+      service: ['',[Validators.required,Validators.minLength(8)]],
 
 
     })
+  }
+  getservice() {
+    this.Servicempl.Affichservice().subscribe({
+      next:(data)=>{
+        this.listeservices=data
+  }
+  })
   }
 
 
@@ -36,6 +50,10 @@ export class AjoutsiteComponent implements OnInit {
 
 
   SiteFonction(){
+    var serviceid={
+      "id":this.siteForm.value.service
+    }
+    this.siteForm.value.service=serviceid
     console.log(this.siteForm.value)
     this.siteservice.AjoutSite(this.siteForm.value).subscribe({
       next:(data)=>{

@@ -157,6 +157,9 @@ import { ROUTES, RouterModule } from '@angular/router';
 import { IconserviceComponent } from './composants/views/service/iconservice/iconservice.component';
 import { IconlocaliteComponent } from './composants/views/localite/iconlocalite/iconlocalite.component';
 import { ModiemplComponent } from './composants/views/employe/modiempl/modiempl.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DatepointageComponent } from './composants/views/pointages/datepointage/datepointage.component';
+import { PopupComponent } from './composants/views/popup/popup.component';
 
 
 
@@ -316,6 +319,8 @@ import { ModiemplComponent } from './composants/views/employe/modiempl/modiempl.
     IconserviceComponent,
     IconlocaliteComponent,
     ModiemplComponent,
+    DatepointageComponent,
+    PopupComponent,
 
   ],
   imports: [
@@ -324,6 +329,7 @@ import { ModiemplComponent } from './composants/views/employe/modiempl/modiempl.
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
 
 
 

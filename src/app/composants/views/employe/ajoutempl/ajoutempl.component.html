@@ -41,7 +41,7 @@
 <form action="#" class="row g-3" [formGroup]="emplForm" (ngSubmit)="EmplFonction()">
   <div class="col-md-4">
     <label for="validationServer01" class="form-label">Nom</label>
-    <input type="nom" formControlName="nom" class="form-control " name="ngModel" id="nom" value="nom" required>
+    <input type="nom" formControlName="nom" class="form-control " name="ngModel" pattern="[a-z]+" id="nom" value="nom" required>
     <div class="valid-feedback">
 
 
