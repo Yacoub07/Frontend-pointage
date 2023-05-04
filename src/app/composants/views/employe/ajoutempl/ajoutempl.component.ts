@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { Router, Route } from '@angular/router';
 import { EmployeService } from '../employe.service';
 import { ServiceService } from '../../service/service.service';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Component({
@@ -21,10 +22,12 @@ export class AjoutemplComponent implements OnInit {
   images! :File
 
 
+
   constructor(private employeservice:EmployeService,
     private router: Router,
     private formBuilder: FormBuilder,
-    private Servicempl : ServiceService)
+    private Servicempl : ServiceService,
+    private toastr : ToastrService,)
     {}
   ngOnInit(): void {
     this.getservice();
@@ -33,7 +36,6 @@ export class AjoutemplComponent implements OnInit {
       prenom: ['',[Validators.required,Validators.minLength(4)]],
       matricule: ['',[Validators.required,Validators.minLength(4)]],
       telephone: ['',[Validators.required,Validators.minLength(8)]],
-      password: ['',[Validators.required,Validators.minLength(8)]],
       service: ['',[Validators.required,Validators.minLength(8)]],
       poste_emp: ['',[Validators.required,Validators.minLength(8)]],
       photo : ['',[Validators.required]],
@@ -59,8 +61,14 @@ export class AjoutemplComponent implements OnInit {
       next:(data)=>{
         console.log(data)
         this.emplForm.reset()
+        this.toastr.success("ajouter avec succèss");
+        this.router.navigate(["accueildispositif"])
+
+
         },error:(erreur)=>{
           console.log(erreur)
+          this.toastr.error("Erreur d'ajoute");
+
         }
     })
 

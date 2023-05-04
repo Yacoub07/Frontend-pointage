@@ -70,13 +70,6 @@
   </div>
 
   <div class="col-md-4">
-    <label for="validationServer02" class="form-label">Mots de passe</label>
-    <input type="password" formControlName="password" class="form-control " name="ngModel" id="password" value="mdp" required>
-    <div class="valid-feedback">
-    </div>
-  </div>
-
-  <div class="col-md-4">
     <label for="validationServer02" class="form-label">Service</label>
     <select type="service" formControlName="service" class="form-control " name="ngModel" id="service" value="service" required>
       <option *ngFor="let service of listeservices" value="{{service?.id}}">{{service?.nom_service}}</option>

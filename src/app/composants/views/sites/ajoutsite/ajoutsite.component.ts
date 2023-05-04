@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { Router, Route } from '@angular/router';
 import { SiteService } from '../site.service';
 import { ServiceService } from '../../service/service.service';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Component({
@@ -23,7 +24,8 @@ export class AjoutsiteComponent implements OnInit {
   constructor(private siteservice:SiteService,
     private router: Router,
     private formBuilder: FormBuilder,
-    private Servicempl : ServiceService
+    private Servicempl : ServiceService,
+    private toastr : ToastrService,
     )
     {}
   ngOnInit(): void {
@@ -58,8 +60,13 @@ export class AjoutsiteComponent implements OnInit {
     this.siteservice.AjoutSite(this.siteForm.value).subscribe({
       next:(data)=>{
 console.log(data)
+this.siteForm.reset()
+this.toastr.success("Site ajouter avec succèss");
+this.router.navigate(["accueilsite"])
+
       },error:(erreur)=>{
         console.log(erreur)
+        this.toastr.error("Erreur d'ajoute");
       }
     })
 

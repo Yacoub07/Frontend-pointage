@@ -6,6 +6,7 @@ import { Router, Route } from '@angular/router';
 import { DispositifService } from '../dispositif.service';
 import { ServiceService } from '../../service/service.service';
 import { SiteService } from '../../sites/site.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-ajoutdispositif',
@@ -15,7 +16,8 @@ import { SiteService } from '../../sites/site.service';
 export class AjoutdispositifComponent {
   public dispositForm!: FormGroup;
   listesite:any;
-  alert:boolean=false
+
+  public messagerreur!: string;
 
   isSubmitted  =  false;
   listedispositif: any;
@@ -24,7 +26,9 @@ export class AjoutdispositifComponent {
   constructor(private dispositifservice:DispositifService,
     private router: Router,
     private formBuilder: FormBuilder,
-    private Sitempl:SiteService)
+    private Sitempl:SiteService,
+    private toastr : ToastrService,
+    )
     {}
   ngOnInit(): void {
     this.getsite();
@@ -34,9 +38,10 @@ export class AjoutdispositifComponent {
       ip_dispo: ['',[Validators.required,Validators.minLength(4)]],
       port: ['',[Validators.required,Validators.minLength(4)]],
       site: ['',[Validators.required,Validators.minLength(4)]],
-
     })
   }
+
+
   getsite() {
     this.Sitempl.Affichsite().subscribe({
       next:(data)=>{
@@ -59,23 +64,25 @@ export class AjoutdispositifComponent {
       next:(data)=>{
 console.log(data)
 this.dispositForm.reset()
-      },error:(erreur)=>{
+this.toastr.success("ajouter avec succèss");
+this.router.navigate(["accueildispositif"])
+
+      },
+
+      error:(erreur)=>{
         console.log(erreur)
+        this.toastr.error("Erreur d'ajoute");
+
       }
+
 
     })
 
-//message d'erreur
-this.alert=true
-this.listedispositif.reset({})
+
 
     }
 
-    fermalert ()
-    {
-      this.alert=false
 
-    }
 
 
 }

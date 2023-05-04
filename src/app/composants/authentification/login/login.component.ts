@@ -8,6 +8,7 @@ import { User } from './user';
 import { DashboardComponent } from '../../views/accueil/dashboard/dashboard.component';
 import { NgModel } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { ToastrService } from 'ngx-toastr';
 
 
 
@@ -27,7 +28,9 @@ export class LoginComponent implements OnInit {
 
 constructor(private autService: AutService,
             private router: Router,
-            private formBuilder: FormBuilder)
+            private formBuilder: FormBuilder,
+            private toastr : ToastrService,
+            )
 {}
 
   ngOnInit(): void {
@@ -48,6 +51,8 @@ constructor(private autService: AutService,
       next:(result: string | null)=>{
         if(result!=null){
           localStorage.setItem('token', result)
+          this.LoginForm.reset()
+          this.toastr.success("Connecter avec succèss");
 
           this.router.navigateByUrl('dashboard')
         }

@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { Router, Route } from '@angular/router';
 import { ServiceService } from '../service.service';
 import { SiteService } from '../../sites/site.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-ajoutservice',
@@ -24,7 +25,8 @@ export class AjoutserviceComponent {
   constructor(private serviceservice: ServiceService,
     private router: Router,
     private formBuilder: FormBuilder,
-    private sitempl: SiteService
+    private sitempl: SiteService,
+    private toastr : ToastrService,
     )
     {}
   ngOnInit(): void {
@@ -62,8 +64,15 @@ export class AjoutserviceComponent {
       next:(data)=>{
 console.log(data)
 this.serviceForm.reset()
+this.toastr.success("Service ajouter avec succèss!!");
+this.router.navigate(["accueilservice"])
+
+
       },error:(erreur)=>{
         console.log(erreur)
+        this.toastr.error("Erreur d'ajoute");
+
+
       }
     })
 

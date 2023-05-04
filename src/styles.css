@@ -1,3 +1,8 @@
+@import  ' ngx-toastr/toastr ' ;
+
+
+
+
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape){}
 
 /* You can add global styles to this file, and also import other style files */

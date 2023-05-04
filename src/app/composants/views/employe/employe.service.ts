@@ -10,7 +10,7 @@ import { AjoutemplComponent } from './ajoutempl/ajoutempl.component';
 export class EmployeService {
   [x: string]: any;
 
-  urlEmploye = "http://localhost:8080/employe"
+  urlEmploye = "http://localhost:8080/Employe"
   urlAdminEwaati = "http://localhost:8080/ewaati"
 
 
@@ -27,7 +27,7 @@ export class EmployeService {
     let data = new FormData();
     data.append('file',photo)
     data.append('employe',JSON.stringify(userInfo))
-   return  this.httpcl.post(this.urlEmploye+"/ajout", data, {responseType:"json" });
+   return  this.httpcl.post(this.urlEmploye+"/ajout/{AUT_id}", data, {responseType:"json" });
   }
 
 

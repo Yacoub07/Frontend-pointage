@@ -14,9 +14,12 @@ export class RubriqueComponent implements OnInit {
    public countempl!:any;
    public countservice!:any;
    public countsite!:any;
+   public countliste!:any
+
 
 
   isSubmitted  =  false;
+
 
 
   constructor(private rubriqueserviceService: RubriqueserviceService,
@@ -28,40 +31,47 @@ export class RubriqueComponent implements OnInit {
 
   ngOnInit(): void {
     this.countempls();
-    this.countserv();
-    this.countsit();
+    // this.countserv();
+    // this.countsit();
   }
+
+
+
+
+
 
   countempls(){
 
     this.rubriqueserviceService.Affichcountempl().subscribe({
       next:(data)=>{
-        this.countempl=data
+        this.countliste=data
+        this.countempl=this.countliste[0]
+
       },error:(erreur)=>{
         console.log(erreur)
       }
     })
     }
 
-    countserv(){
+    // countserv(){
 
-      this.rubriqueserviceService.Affichcountservice().subscribe({
-        next:(data)=>{
-          this.countservice=data
-        },error:(erreur)=>{
-          console.log(erreur)
-        }
-      })
-      }
+    //   this.rubriqueserviceService.Affichcountservice().subscribe({
+    //     next:(data)=>{
+    //       this.countservice=data
+    //     },error:(erreur)=>{
+    //       console.log(erreur)
+    //     }
+    //   })
+    //   }
 
-      countsit(){
+    //   countsit(){
 
-        this.rubriqueserviceService.Affichcountsite().subscribe({
-          next:(data)=>{
-            this.countsite=data
-          },error:(erreur)=>{
-            console.log(erreur)
-          }
-        })
-        }
+    //     this.rubriqueserviceService.Affichcountsite().subscribe({
+    //       next:(data)=>{
+    //         this.countsite=data
+    //       },error:(erreur)=>{
+    //         console.log(erreur)
+    //       }
+    //     })
+    //     }
 }

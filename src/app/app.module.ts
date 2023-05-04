@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './composants/views/accueil/header/header.component';
@@ -160,6 +161,8 @@ import { ModiemplComponent } from './composants/views/employe/modiempl/modiempl.
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DatepointageComponent } from './composants/views/pointages/datepointage/datepointage.component';
 import { PopupComponent } from './composants/views/popup/popup.component';
+import { ToastrModule } from 'ngx-toastr';
+
 
 
 
@@ -322,6 +325,7 @@ import { PopupComponent } from './composants/views/popup/popup.component';
     DatepointageComponent,
     PopupComponent,
 
+
   ],
   imports: [
     BrowserModule,
@@ -330,6 +334,11 @@ import { PopupComponent } from './composants/views/popup/popup.component';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    BrowserAnimationsModule ,
+    ToastrModule . forRoot ( ),
+
+
+
 
 
 

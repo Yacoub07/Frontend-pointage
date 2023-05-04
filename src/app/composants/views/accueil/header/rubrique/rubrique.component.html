@@ -15,8 +15,8 @@
         <div class="box-topic">Employe</div>
         <div class="number"></div>
         <div class="indicator">
-          <i class='bx bx-up-arrow-alt'>{{countempl}}</i>
-          <span class="text">Total employé</span>
+          <i class='bx bx-up-arrow-alt'>{{countempl?.Employe}}</i>
+          <span class="text">Total employe</span>
         </div>
       </div>
       <i class='bx bxs-cart-add cart two' ><a [routerLink]="'/accueilemploye'"><img src="../../../assets/icon/employe.png" alt=""></a></i>
@@ -26,7 +26,7 @@
           <div class="box-topic">Services</div>
           <div class="number"></div>
           <div class="indicator">
-            <i class='bx bx-down-arrow-alt down'>{{countservice}}</i>
+            <i class='bx bx-down-arrow-alt down'>{{countempl?.Services}}</i>
             <span class="text">Total services</span>
           </div>
       </div>
@@ -37,7 +37,7 @@
         <div class="box-topic">Sites</div>
         <div class="number"></div>
         <div class="indicator">
-          <i class='bx bx-up-arrow-alt'>{{countsite}}</i>
+          <i class='bx bx-up-arrow-alt'>{{countempl?.Sites}}</i>
           <span class="text">Total sites</span>
         </div>
       </div>

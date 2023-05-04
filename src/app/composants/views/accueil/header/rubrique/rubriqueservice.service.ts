@@ -15,6 +15,14 @@ export class RubriqueserviceService {
   )
   {}
 
+
+  Affichcountliste(){
+    return this.httpcl.get(this.urlEmploye+"/count");
+  }
+
+
+
+
   Affichcountempl()
   {
     return this.httpcl.get(this.urlEmploye+"/count");
